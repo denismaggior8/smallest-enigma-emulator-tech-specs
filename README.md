@@ -40,7 +40,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by two custom-built, highly optimized libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
-    2.  **[micropython-enigma-python (v3.1.2)](https://github.com/denismaggior8/micropython-enigma-python)**: The MicroPython-specific implementation that serves as the mathematical and cryptographic engine, allowing the Enigma logic to execute autonomously within the strict 410 KB compiled software limit.
+    2.  **[micropython-enigma-python (v3.1.2)](https://github.com/denismaggior8/micropython-enigma-python)**: The **[enigma-python (v3.1.2)](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
 
 ## 5. Verification Methodology
 To satisfy Guinness World Records adjudicators, the following verification steps will be strictly documented:

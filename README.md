@@ -6,7 +6,7 @@
 ---
 
 ## 1. Executive Summary
-This repository serves as the official Technical Specifications document for a Guinness World Records attempt. The objective is to design, deploy, and verify the smallest possible self-contained Enigma machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Enigma machine (such as the M3 or M4) and can successfully decrypt historical ciphertexts.
+This repository serves as the official Technical Specifications/Implementations document for a Guinness World Records attempt. The objective is to design, deploy, and verify the smallest possible self-contained Enigma machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Enigma machine (such as the M3 or M4) and can successfully decrypt historical ciphertexts.
 
 ## 2. Claim Definition & Scope
 To ensure strict adherence to the record title, the following terms are technically defined:

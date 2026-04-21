@@ -115,7 +115,46 @@ if EXPECTED_PLAINTEXT in cleaned_output.upper():
     print(f"\n=============================================================================")
     print(f"✅ VERIFIED: P1030700 decryption matches expected historical plaintext!")
     print(f"=============================================================================\n")
-    sys.exit(0)
+    
+    print("Re-initializing rotor positions for reverse (encryption) verification...")
+    # Resend the initial positions to reset the state
+    send_cmd("AT+ROTOR=0,VIII,20,2")
+    send_cmd("AT+ROTOR=1,III,2,6")
+    send_cmd("AT+ROTOR=2,IV,0,12")
+    send_cmd("AT+ROTOR=3,G,0,21")
+    
+    print("Transmitting Plaintext blocks to verify encryption...")
+    s.read_all() # clean buffer
+    
+    reverse_out = ""
+    for i, char in enumerate(EXPECTED_PLAINTEXT):
+        s.write(f"{char}\r\n".encode("utf-8"))
+        time.sleep(0.05)
+        
+        resp = s.read_all().decode("utf-8", errors="ignore")
+        clean_chunk = resp.replace("OK", "").replace("\r", "").replace("\n", "").strip()
+        reverse_out += clean_chunk
+        
+        if (i + 1) % 20 == 0:
+            print(f"[{i+1}/{len(EXPECTED_PLAINTEXT)}] Encrypted so far: {reverse_out[-20:]}...")
+            
+    time.sleep(2)
+    final_resp = s.read(1024).decode("utf-8", errors="ignore")
+    reverse_out += final_resp.replace("OK", "").replace("\r", "").replace("\n", "").strip()
+    cleaned_reverse_output = "".join(reverse_out.split())
+
+    if CIPHERTEXT in cleaned_reverse_output.upper():
+        print(f"\n=============================================================================")
+        print(f"✅ VERIFIED: P1030700 encryption identically reproduces the historical ciphertext!")
+        print(f"=============================================================================\n")
+        sys.exit(0)
+    else:
+        print(f"\n=============================================================================")
+        print(f"FAILED: Hardware output did not match expected P1030700 ciphertext in reverse mode.")
+        print(f"EXPECTED : {CIPHERTEXT}")
+        print(f"RECEIVED (RAW): \n{cleaned_reverse_output.upper()}")
+        print(f"=============================================================================\n")
+        sys.exit(1)
 else:
     print(f"\n=============================================================================")
     print(f"FAILED: Hardware output did not match expected P1030700 plaintext.")

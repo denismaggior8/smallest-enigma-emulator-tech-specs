@@ -1,46 +1,46 @@
 # Technical Specifications: Guinness World Record Attempt
 
 ## Record Title
-**"The smallest, documented, computationally autonomous, Enigma machine emulator capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
+**"The smallest, documented, computationally autonomous Enigma machine emulator, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
 
 ---
 
 ## 1. Executive Summary
-This repository serves as the official Technical Specifications document for a Guinness World Records attempt. The objective is to design, deploy, and verify the smallest possible self-contained Enigma machine emulator (software or firmware) that accurately replicates the cryptographic functions of a legitimate World War II Enigma machine (such as the M3 or M4) and can successfully decrypt historical ciphertexts.
+This repository serves as the official Technical Specifications document for a Guinness World Records attempt. The objective is to design, deploy, and verify the smallest possible self-contained Enigma machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Enigma machine (such as the M3 or M4) and can successfully decrypt historical ciphertexts.
 
 ## 2. Claim Definition & Scope
 To ensure strict adherence to the record title, the following terms are technically defined:
 
 *   **Smallest**: The record is defined by two primary metrics of miniaturization:
-    *   **Physical Hardware Footprint**: The physical dimensions of the self-contained hardware emulator, which measures exactly **23.5 × 18 mm**.
-    *   **Software/Firmware Size**: The total compiled software payload footprint is strictly limited to **410 KB**.
+    *   **Physical Hardware Footprint**: The physical dimensions of the self-contained hardware emulator
+    *   **Software/Firmware Size**: The total compiled software payload footprint
 *   **Documented**: Every physical and software aspect of the record-attempting device is exhaustively documented to ensure it is fully reproducible, challengeable, and verifiable by independent adjudicators.
-*   **Computationally Autonomous**: All encryption and decryption logic MUST be executed entirely on the physical device itself. The system is strictly prohibited from offloading any part of the computation to external processors, and it must avoid making any network calls to perform its operations.
+*   **Computationally Autonomous**: All encryption and decryption operations MUST be executed entirely on the physical device itself, without offloading any computation or relying on network calls. However, given the intentionally constrained hardware memory, the emulator is not required to buffer an entire message simultaneously; rather, the external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
 *   **Enigma Machine Emulator**: The system must cryptographically mirror the behavior of the historical machine, explicitly handling:
     *   Rotor wiring and stepping (including double-stepping anomalies).
-    *   Ring settings (*Ringstellung*).
+    *   Rotor settings (*Grundstellung* + *Ringstellung*).
     *   Reflector (*Umkehrwalze*).
     *   Plugboard (*Steckerbrett*).
-*   **Original 1945-era Ciphertexts**: The emulator must be validated against known, historically accurate messages, proving mathematical equivalence to the original hardware.
+*   **Original 1945-era Ciphertexts**: The emulator must be validated against known, historically accurate messages, provided with correct key settings.
 
 ## 3. Technical Constraints & Design Rules
 In pursuit of the absolute minimal size, the following technical constraints apply to the implementation:
 1.  **Input/Output**: The system must provide a deterministic way to input the key settings (Rotor selection, Ring settings, Plugboard connections, initial positions) and the ciphertext, and output the plaintext.
 2.  **No Pre-computed Tables**: The emulator cannot use massive pre-computed look-up tables to bypass the algorithmic implementation of the Enigma machine, as this violates the spirit of "emulation."
 3.  **Language**: The specific programming language (e.g., Python, C, Assembly) will be selected based on its capacity for lexical minimalism or binary footprint. 
-4.  **Streaming Support**: To accommodate hardware memory limitations, the system is explicitly permitted to process long texts by streaming them in discrete batches, rather than buffering the entire payload in memory simultaneously.
 
 ## 4. Architecture & Implementation
 
-*   **Target Language / Firmware**: MicroPython (firmware running on WaveShare RP2040-Zero)
+*   **Target Language / Firmware**: MicroPython
+*   **Hardware**: WaveShare RP2040-Zero
 *   **Physical Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
 *   **Software Size**: 410 KB
-*   **Machine Target**: `[M3 / M4]`
+*   **Machine Target**: M3 / M4
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by two custom-built, highly optimized libraries developed by the claimant:
-    1.  **[enigma-core (v1.0)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
-    2.  **[micropython-enigma-python (v3.1.0)](https://github.com/denismaggior8/micropython-enigma-python)**: The MicroPython-specific implementation that serves as the mathematical and cryptographic engine, allowing the Enigma logic to execute autonomously within the strict 410 KB compiled software limit.
+    1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
+    2.  **[micropython-enigma-python (v3.1.2)](https://github.com/denismaggior8/micropython-enigma-python)**: The MicroPython-specific implementation that serves as the mathematical and cryptographic engine, allowing the Enigma logic to execute autonomously within the strict 410 KB compiled software limit.
 
 ## 5. Verification Methodology
 To satisfy Guinness World Records adjudicators, the following verification steps will be strictly documented:

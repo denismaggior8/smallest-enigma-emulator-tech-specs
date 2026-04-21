@@ -52,17 +52,19 @@ To facilitate adjudication, this repository provides the following,   reproducib
 
 - `verify_p1030700.sh` based on the famous U-534 M4 interception preserved by the [Hoerenberg Enigma M4 Project](https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700). This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via `enigma-core` AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.
 
-> **Status:** ✅ VERIFIED. The emulator hardware logic perfectly computes the sequence identically to mathematical emulation standards, securely accounting for physical edge-cases (like double stepping) naturally on the MicroPython hardware.
+> **Status:** ✅ VERIFIED. The emulator hardware logic perfectly computes the sequence identically to mathematical emulation standards, securely accounting for physical edge-cases (like double stepping) naturally on the hardware emulator.
 
 *Note: While the Verification Kit utilizes the Hoerenberg M4 message for immediate proof, the emulator is strictly **not** limited to these specific examples. It is a functionally complete replica capable of encrypting or decrypting any authentic WWII Enigma configuration.*
 
 ## 6. Evidence Collection
 To support the record claim, this repository will eventually contain:
-1.  **Source Code**: The raw, minimized code.
-2.  **Un-minified Equivalent**: A readable version mapping exactly to the minimized version to satisfy the "documented" requirement.
-3.  **Video Demonstration**: Raw, unedited footage of the byte-count verification and the test vector decryption run.
-4.  **Log Files**: Standard out traces of the decryption process.
-5.  **Independent Witness Signatures**: Contact details and statements from computing/cryptography professionals verifying the legitimacy of the code.
+1.  **Source Code**: A reference to the source codes of all the employed software parts (firmware + enigma libraries), available at:
+    - [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
+    - [micropython-enigma-python 3.1.2](https://github.com/denismaggior8/micropython-enigma-python/releases/tag/3.1.2)
+    - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2).
+2.  **Video Demonstration**: Raw, unedited footage of the byte-count verification and the test vector decryption run.
+3.  **Log Files**: Standard out traces of the decryption process.
+
 
 ---
 *Maintained for Guinness World Record Adjudication.*

@@ -24,6 +24,7 @@ To ensure strict adherence to the record title, the following terms are technica
     *   Plugboard (*Steckerbrett*).
 *   **Original 1945-era Ciphertexts**: The emulator must be validated against known, historically accurate messages, provided with correct key settings.
 
+
 ## 3. Technical Constraints & Design Rules
 In pursuit of the absolute minimal size, the following technical constraints apply to the implementation:
 1.  **Input/Output**: The system must provide a deterministic way to input the key settings (Rotor selection, Ring settings, Plugboard connections, initial positions) and the ciphertext, and output the plaintext.
@@ -72,6 +73,9 @@ In the following table, we summarize the Verification Kits provided in this repo
 | :--- | :---: | :--- |
 | `verify_p1030700.sh` | ✅ VERIFIED | [`verify_p1030700.log`](./verify_p1030700.log) |
 
+## 7. Supersession Criteria
+
+To officially supersede this record, a competing implementation must equal or improve upon *all three* primary dimensions of miniaturization, demonstrating a strictly smaller footprint in **at least one** dimension while not exceeding the benchmarks established here in the others.
 
 ---
 *Maintained for Guinness World Record Adjudication.*

@@ -50,7 +50,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
 ## 5. Verification Methodology
 To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
 
-To facilitate adjudication, this repository provides the following,   reproducible,  **Verification Kits**:
+To facilitate adjudication, this repository provides the following,   reproducible,  **[Verification Kits](./tests)**:
 
 - [`verify_p1030700.sh`](./tests/verify_p1030700.sh) based on the famous U-534 M4 interception preserved by the [Hoerenberg Enigma M4 Project](https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700). This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via `enigma-core` AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.
 
@@ -63,7 +63,7 @@ To support the record claim, this repository will eventually contain:
     - [micropython-enigma-python 3.1.2](https://github.com/denismaggior8/micropython-enigma-python/releases/tag/3.1.2)
     - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
 2.  **Video Demonstration**: Raw, unedited footage of the   verification and the test vector decryption run.
-3.  **Log Files**: This repository explicitly contains the raw, unedited standard output logs (`.log` files) produced by every Verification Kit script execution. These files permanently document the exact, real-time AT commands, decryption streams, and reverse-encryption processes as well as the test status.
+3.  **[Log Files](./logs)**: This repository explicitly contains the raw, unedited standard output logs (`.log` files) produced by every Verification Kit script execution. These files permanently document the exact, real-time AT commands, decryption streams, and reverse-encryption processes as well as the test status.
 
 In the following table, we summarize the Verification Kits provided in this repository, their status and the output logs:
 

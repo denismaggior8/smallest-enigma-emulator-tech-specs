@@ -1,0 +1,68 @@
+Initializing Smallest Enigma Emulator (P1030700 Verification Mode) on /dev/tty.usbmodem101...
+Sending: AT+ENIGMA=M3
+   -> OK
+Sending: AT+ENIGMA=M4
+   -> OK
+Sending: AT+REFLECTOR=BT
+   -> OK
+Sending: AT+ROTOR=0,VIII,20,2
+   -> OK
+Sending: AT+ROTOR=1,III,2,6
+   -> OK
+Sending: AT+ROTOR=2,IV,0,12
+   -> OK
+Sending: AT+ROTOR=3,G,0,21
+   -> OK
+Sending: AT+PLUGBOARD=C,H
+   -> OK
+Sending: AT+PLUGBOARD=E,J
+   -> OK
+Sending: AT+PLUGBOARD=N,V
+   -> OK
+Sending: AT+PLUGBOARD=O,U
+   -> OK
+Sending: AT+PLUGBOARD=T,Y
+   -> OK
+Sending: AT+PLUGBOARD=L,G
+   -> OK
+Sending: AT+PLUGBOARD=S,Z
+   -> OK
+Sending: AT+PLUGBOARD=P,K
+   -> OK
+Sending: AT+PLUGBOARD=D,I
+   -> OK
+Sending: AT+PLUGBOARD=Q,B
+   -> OK
+Configuration applied successfully. Transmitting Ciphertext blocks...
+[20/131] Processed so far: komxbdmxuuubooteyfx...
+[40/131] Processed so far: fxdxuuuausbilvunyyzw...
+[60/131] Processed so far: wosechsxuuuflottxvvv...
+[80/131] Processed so far: vuuurwodreisechsvier...
+[100/131] Processed so far: erkkremaskkmituuvzwo...
+[120/131] Processed so far: odreifuvfyewhsyuuuzw...
+
+=============================================================================
+✅ VERIFIED: P1030700 decryption matches expected historical plaintext!
+=============================================================================
+
+Re-initializing rotor positions for reverse (encryption) verification...
+Sending: AT+ROTOR=0,VIII,20,2
+   -> OK
+Sending: AT+ROTOR=1,III,2,6
+   -> OK
+Sending: AT+ROTOR=2,IV,0,12
+   -> OK
+Sending: AT+ROTOR=3,G,0,21
+   -> OK
+Transmitting Plaintext blocks to verify encryption...
+[20/131] Encrypted so far: qbhewtdfeqitkuwfqu...
+[40/131] Encrypted so far: uhliqqgvygrsdohdcobf...
+[60/131] Encrypted so far: bfmdhxskofpaodrsvber...
+[80/131] Encrypted so far: reiqzvedaxshohbiymci...
+[100/131] Encrypted so far: iizskgndlnfkfvlwwhzx...
+[120/131] Encrypted so far: zxzgqxwsspwlsoqxeanc...
+
+=============================================================================
+✅ VERIFIED: P1030700 encryption identically reproduces the historical ciphertext!
+=============================================================================
+

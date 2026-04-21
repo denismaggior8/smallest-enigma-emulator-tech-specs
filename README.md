@@ -11,9 +11,10 @@ This repository serves as the official Technical Specifications document for a G
 ## 2. Claim Definition & Scope
 To ensure strict adherence to the record title, the following terms are technically defined:
 
-*   **Smallest**: The record is defined by two primary metrics of miniaturization:
+*   **Smallest**: The record is defined by three primary dimensions of miniaturization:
     *   **Physical Hardware Footprint**: The physical dimensions of the self-contained hardware emulator
     *   **Software/Firmware Size**: The total compiled software payload footprint
+    *   **Computational Resources**: The strict hardware constraints imposed on the system, specifically concerning CPU capability, volatile memory (RAM), and non-volatile storage (ROM/File System)
 *   **Documented**: Every physical and software aspect of the record-attempting device is exhaustively documented to ensure it is fully reproducible, challengeable, and verifiable by independent adjudicators.
 *   **Computationally Autonomous**: All encryption and decryption operations MUST be executed entirely on the physical device itself, without offloading any computation or relying on network calls. However, given the intentionally constrained hardware memory, the emulator is not required to buffer an entire message simultaneously; rather, the external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
 *   **Enigma Machine Emulator**: The system must cryptographically mirror the behavior of the historical machine, explicitly handling:
@@ -32,7 +33,10 @@ In pursuit of the absolute minimal size, the following technical constraints app
 ## 4. Architecture & Implementation
 
 *   **Target Language / Firmware**: MicroPython
-*   **Hardware**: WaveShare RP2040-Zero
+*   **Hardware Limits**: WaveShare RP2040-Zero
+    *   **CPU**: Dual-core ARM Cortex-M0+ processor (flexible clock up to 133 MHz)
+    *   **RAM**: 264KB of strictly limited SRAM for execution
+    *   **ROM/File System**: 2MB of on-board Flash memory for firmware and logic payloads
 *   **Physical Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
 *   **Software Size**: 410 KB

@@ -64,14 +64,13 @@ To support the record claim, this repository will eventually contain:
 2.  **Video Demonstration**: Raw, unedited footage of the byte-count verification and the test vector decryption run.
 3.  **Log Files**: This repository explicitly contains the raw, unedited standard output logs (`.log` files) produced by every Verification Kit script execution. These files permanently document the exact, real-time AT commands, decryption streams, and reverse-encryption processes as well as the test status.
 
-
 In the following table, we summarize the Verification Kits provided in this repository, their status and the output logs:
 
 
 
-    | Verification Script | Execution Status | Output Log |
-    | :--- | :---: | :--- |
-    | `verify_p1030700.sh` | ✅ VERIFIED | [`verify_p1030700.log`](./verify_p1030700.log) |
+| Verification Script | Execution Status | Output Log |
+| :--- | :---: | :--- |
+| `verify_p1030700.sh` | ✅ VERIFIED | [`verify_p1030700.log`](./verify_p1030700.log) |
 
 
 ---

@@ -43,10 +43,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
     2.  **[micropython-enigma-python (v3.1.2)](https://github.com/denismaggior8/micropython-enigma-python)**: The **[enigma-python (v3.1.2)](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
 
 ## 5. Verification Methodology
-To satisfy Guinness World Records adjudicators, the following verification steps will be strictly documented:
-
-### 5.1 Cryptographic Verification
-The definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
+To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
 
 To facilitate adjudication, this repository provides the following,   reproducible,  **Verification Kits**:
 

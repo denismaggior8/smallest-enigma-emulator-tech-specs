@@ -48,7 +48,7 @@ To satisfy Guinness World Records adjudicators, the following verification steps
 ### 5.1 Cryptographic Verification
 The definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
 
-To facilitate adjudication, this repository provides a reproducible **Verification Kits**:
+To facilitate adjudication, this repository provides the following,   reproducible,  **Verification Kits**:
 
 -  (`verify_p1030700.sh`) based on the famous U-534 M4 interception preserved by the [Hoerenberg Enigma M4 Project](https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700). This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via `enigma-core` AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.
 

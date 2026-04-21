@@ -58,7 +58,7 @@ To support the record claim, this repository will eventually contain:
 1.  **Source Code**: A reference to the source codes of all the employed software parts (firmware + enigma libraries), available at:
     - [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
     - [micropython-enigma-python 3.1.2](https://github.com/denismaggior8/micropython-enigma-python/releases/tag/3.1.2)
-    - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2).
+    - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
 2.  **Video Demonstration**: Raw, unedited footage of the byte-count verification and the test vector decryption run.
 3.  **Log Files**: Standard out traces of the decryption process.
 

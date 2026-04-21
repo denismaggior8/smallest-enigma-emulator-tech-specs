@@ -40,7 +40,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
 *   **Physical Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
 *   **Software Size**: 410 KB
-*   **Machine Target**: M3 / M4
+*   **Enigma Machine Models Implemented**: M3 / M4
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by two custom-built, highly optimized libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.

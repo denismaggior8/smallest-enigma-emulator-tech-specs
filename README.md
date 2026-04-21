@@ -53,8 +53,6 @@ To facilitate adjudication, this repository provides the following,   reproducib
 
 - `verify_p1030700.sh` based on the famous U-534 M4 interception preserved by the [Hoerenberg Enigma M4 Project](https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700). This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via `enigma-core` AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.
 
-> **Status:** ✅ VERIFIED. The emulator hardware logic perfectly computes the sequence identically to mathematical emulation standards, securely accounting for physical edge-cases (like double stepping) naturally on the hardware emulator.
-
 *Note: While the Verification Kit utilizes/provides some well known M4 message for immediate proof, the emulator is strictly **not** limited to these specific examples. It is a functionally complete replica capable of encrypting or decrypting any authentic M3/M4 Enigma configuration.*
 
 ## 6. Evidence Collection

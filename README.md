@@ -62,7 +62,7 @@ To support the record claim, this repository will eventually contain:
     - [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
     - [micropython-enigma-python 3.1.2](https://github.com/denismaggior8/micropython-enigma-python/releases/tag/3.1.2)
     - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
-2.  **Video Demonstration**: Raw, unedited footage of the   verification and the test vector decryption run.
+2.  **Video Demonstration**: Raw, unedited footage of the verification and the test vector decryption run.
 3.  **[Log Files](./logs)**: This repository explicitly contains the raw, unedited standard output logs (`.log` files) produced by every Verification Kit script execution. These files permanently document the exact, real-time AT commands, decryption streams, and reverse-encryption processes as well as the test status.
 
 In the following table, we summarize the Verification Kits provided in this repository, their status and the output logs:
@@ -71,7 +71,9 @@ In the following table, we summarize the Verification Kits provided in this repo
 
 | Verification Script | Verification Command | Execution Status | Output Log | Video |
 | :--- | :--- | :---: | :--- | :--- |
-| [`verify_p1030700.sh`](./tests/verify_p1030700.sh) | `./tests/verify_p1030700.sh` | ✅ VERIFIED | [`verify_p1030700.log`](./logs/verify_p1030700.log) | [`./video/video_p1030700.cast`](./video_p1030700.cast) |
+| [`verify_p1030700.sh`](./tests/verify_p1030700.sh) | `asciinema rec -q -c "./tests/verify_p1030700.sh" video/video_p1030700.cast --overwrite \| tee logs/verify_p1030700.log` | ✅ VERIFIED | [`verify_p1030700.log`](./logs/verify_p1030700.log) | [`video_p1030700.cast`](./video/video_p1030700.cast) |
+
+*Note: The **Video Demonstrations** have been recorded using [asciinema](https://asciinema.org/) to faithfully capture standard output directly from the hardware execution. You can seamlessly replay any `.cast` file linked above by running `asciinema play <file.cast>` in your terminal (e.g., `asciinema play video/video_p1030700.cast`).*
 
 ## 7. Supersession Criteria
 

@@ -33,15 +33,15 @@ In pursuit of the absolute minimal size, the following technical constraints app
 
 ## 4. Architecture & Implementation
 
-*   **Target Language / Firmware**: MicroPython ESP32 GENERIC v1.26.1 build 20250911
+*   **Target Language / Runtime**: MicroPython ESP32 GENERIC v1.26.1 build 20250911
 *   **Hardware**: WaveShare RP2040-Zero
     *   **CPU**: Dual-core ARM Cortex-M0+ processor (flexible clock up to 133 MHz)
     *   **RAM**: 264KB of strictly limited SRAM for execution
     *   **ROM/File System**: 2MB of on-board Flash memory for firmware and logic payloads
 *   **Physical Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
-*   **Software Size**: 410 KB
 *   **Enigma Machine Models Implemented**: M3 / M4
+*   **Firmware Size**: 410 KB
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by two custom-built, highly optimized libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.

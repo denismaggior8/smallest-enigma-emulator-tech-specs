@@ -33,8 +33,8 @@ In pursuit of the absolute minimal size, the following technical constraints app
 
 ## 4. Architecture & Implementation
 
-*   **Target Language / Firmware**: MicroPython
-*   **Hardware Limits**: WaveShare RP2040-Zero
+*   **Target Language / Firmware**: MicroPython ESP32 GENERIC v1.26.1 build 20250911
+*   **Hardware**: WaveShare RP2040-Zero
     *   **CPU**: Dual-core ARM Cortex-M0+ processor (flexible clock up to 133 MHz)
     *   **RAM**: 264KB of strictly limited SRAM for execution
     *   **ROM/File System**: 2MB of on-board Flash memory for firmware and logic payloads

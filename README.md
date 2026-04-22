@@ -45,7 +45,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by a runtime layer  (**MicroPython ESP32 GENERIC v1.26.1 build 20250911**) and two custom-built, highly optimized application libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
-    2.  **[micropython-enigma-python (3.1.2)](https://github.com/denismaggior8/micropython-enigma-python)**: The **[enigma-python (v3.1.2)](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
+    2.  **[micropython-enigma-python (3.1.2)](https://github.com/denismaggior8/micropython-enigma-python)**: The **[enigma-python](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
 
 ## 5. Verification Methodology
 To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.

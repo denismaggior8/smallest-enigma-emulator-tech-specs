@@ -65,7 +65,7 @@ To support the record claim, this repository will eventually contain:
 2.  **Video Demonstration**: Raw, unedited footage of the verification and the test vector decryption run.
 3.  **[Log Files](./logs)**: This repository explicitly contains the raw, unedited standard output logs (`.log` files) produced by every Verification Kit script execution. These files permanently document the exact, real-time AT commands, decryption streams, and reverse-encryption processes as well as the test status.
 
-In the following table, we summarize the Verification Kits provided in this repository, their status and the output logs:
+In the following table, we summarize the Verification Kits provided in this repository, detailing their execution commands, completion status, output logs, and native video recordings:
 
 
 

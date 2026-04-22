@@ -69,9 +69,9 @@ In the following table, we summarize the Verification Kits provided in this repo
 
 
 
-| Verification Script | Execution Status | Output Log |
-| :--- | :---: | :--- |
-| [`verify_p1030700.sh`](./tests/verify_p1030700.sh) | ✅ VERIFIED | [`verify_p1030700.log`](./logs/verify_p1030700.log) |
+| Verification Script | Verification Command | Execution Status | Output Log | Video |
+| :--- | :--- | :---: | :--- | :--- |
+| [`verify_p1030700.sh`](./tests/verify_p1030700.sh) | `./tests/verify_p1030700.sh` | ✅ VERIFIED | [`verify_p1030700.log`](./logs/verify_p1030700.log) | [`./video/video_p1030700.cast`](./video_p1030700.cast) |
 
 ## 7. Supersession Criteria
 

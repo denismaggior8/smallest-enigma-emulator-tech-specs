@@ -16,6 +16,10 @@ python3 -c '
 import serial
 import time
 import sys
+from datetime import datetime
+
+ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+print(f"[{ts}] Starting Verification Kit Run")
 
 port = "'"$SERIAL_PORT"'"
 try:

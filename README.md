@@ -11,8 +11,7 @@ This repository serves as the official Technical Specifications/Implementations 
 ## 2. Claim Definition & Scope
 To ensure strict adherence to the record title, the following terms are technically defined:
 
-*   **Smallest**: The record is defined by three primary dimensions of miniaturization:
-    *   **Physical Hardware Footprint**: The physical dimensions of the self-contained hardware emulator
+*   **Smallest**: The record is defined by the **Physical Hardware Footprint** (The physical dimensions of the self-contained hardware emulator)
 *   **Documented**: Every physical and software aspect of the record-attempting device is exhaustively documented to ensure it is fully reproducible, challengeable, and verifiable by independent adjudicators.
 *   **Computationally Autonomous**: All encryption and decryption operations MUST be executed entirely on the physical device itself, without offloading any computation or relying on network calls. However, given the intentionally constrained hardware memory, the emulator is not required to buffer an entire message simultaneously; rather, the external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
 *   **Enigma Machine Emulator**: The system must cryptographically mirror the behavior of the historical machine, explicitly handling:

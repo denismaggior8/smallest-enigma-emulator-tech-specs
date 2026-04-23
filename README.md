@@ -35,11 +35,11 @@ In pursuit of the absolute minimal size, the following technical constraints app
 
 *   **Physical Hardware Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
-*   **Software/Firmware Size**: 771 KB (binary `.uf2` file footprint)
+*   **Software/Firmware Size**: 771 KB (compiled MicroPython binary `.uf2` file footprint)
 *   **Computational Resources**:
     *   **HW Model**: WaveShare RP2040-Zero
     *   **CPU**: Dual-core ARM Cortex-M0+ processor (flexible clock up to 133 MHz)
-    *   **RAM**: 264KB of strictly limited SRAM for execution
+    *   **RAM**: 264KB of SRAM for execution
     *   **ROM/File System**: 2MB of on-board Flash memory for firmware and logic payloads
 *   **Enigma Machine Models Implemented**: M3 / M4
 *   **Firmware Dependencies & Architecture**:
@@ -58,7 +58,7 @@ To facilitate adjudication, this repository provides the following,   reproducib
 
 ## 6. Evidence Collection
 To support the record claim, this repository will eventually contain:
-1.  **Source Code & Firmware**: A reference to the source codes of all the employed software parts (firmware + enigma libraries), available at:
+1.  **Firmware and Libraries Source Code**: A reference to the source codes of all the employed software parts (firmware + enigma libraries), available at:
     - [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
         - **Board Firmware**: [`enigma-core_firmware_v1.0.1_RPI_PICO.uf2`](https://github.com/denismaggior8/enigma-core/releases/download/v1.0.1/enigma-core_firmware_v1.0.1_RPI_PICO.uf2) (SHA256: `791bf4c142088071c10815574e90e70b8020713cc935afbc9a3e3f105b71db0d`)
     - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)

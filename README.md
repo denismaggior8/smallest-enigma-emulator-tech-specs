@@ -1,7 +1,7 @@
 # Technical Specifications: Guinness World Record Attempt
 
 ## Record Title
-**"The smallest historically accurate Enigma emulator running on embedded hardware, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
+**"The smallest, documented, computationally autonomous Enigma machine emulator running on embedded hardware, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
 
 ---
 

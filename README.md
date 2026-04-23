@@ -35,7 +35,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
 
 *   **Physical Hardware Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
-*   **Software/Firmware Size**: 410 KB
+*   **Software/Firmware Size**: 771 KB (binary `.uf2` file footprint)
 *   **Computational Resources**:
     *   **HW Model**: WaveShare RP2040-Zero
     *   **CPU**: Dual-core ARM Cortex-M0+ processor (flexible clock up to 133 MHz)

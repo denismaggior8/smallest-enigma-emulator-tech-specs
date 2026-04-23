@@ -45,7 +45,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by a runtime layer  (**MicroPython ESP32 GENERIC v1.26.1 build 20250911**) and two custom-built, highly optimized application libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
-    2.  **[micropython-enigma-python (3.1.2)](https://github.com/denismaggior8/micropython-enigma-python)**: The **[enigma-python](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
+    2.  **[enigma-python (v3.1.2)](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
 
 ## 5. Verification Methodology
 To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
@@ -58,9 +58,9 @@ To facilitate adjudication, this repository provides the following,   reproducib
 
 ## 6. Evidence Collection
 To support the record claim, this repository will eventually contain:
-1.  **Source Code**: A reference to the source codes of all the employed software parts (firmware + enigma libraries), available at:
+1.  **Source Code & Firmware**: A reference to the source codes of all the employed software parts (firmware + enigma libraries), available at:
     - [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
-    - [micropython-enigma-python 3.1.2](https://github.com/denismaggior8/micropython-enigma-python/releases/tag/3.1.2)
+        - **Board Firmware**: [`enigma-core_firmware_v1.0.1_RPI_PICO.uf2`](https://github.com/denismaggior8/enigma-core/releases/download/v1.0.1/enigma-core_firmware_v1.0.1_RPI_PICO.uf2) (SHA256: `791bf4c142088071c10815574e90e70b8020713cc935afbc9a3e3f105b71db0d`)
     - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
 2.  **Video Demonstration**: Raw, unedited footage of the verification and the test vector decryption run.
 3.  **[Log Files](./logs)**: This repository explicitly contains the raw, unedited standard output logs (`.log` files) produced by every Verification Kit script execution. These files permanently document the exact, real-time AT commands, decryption streams, and reverse-encryption processes as well as the test status.

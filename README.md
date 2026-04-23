@@ -81,7 +81,7 @@ In the following table, we summarize the Verification Kits provided in this repo
 
 ## 7. Supersession Criteria
 
-To officially supersede this record, a competing implementation must equal or improve upon *all three* primary dimensions of miniaturization, demonstrating a strictly smaller footprint in **at least one** dimension while not exceeding the benchmarks established here in the others.
+To officially supersede this record, a competing implementation must demonstrate a strictly smaller physical footprint than the benchmark established here, while maintaining full historical cryptographic accuracy and computational autonomy.
 
 ---
 *Maintained for Guinness World Record Adjudication.*

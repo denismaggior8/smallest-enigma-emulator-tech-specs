@@ -41,15 +41,15 @@ In pursuit of the absolute minimal size, the following technical constraints app
 
 ### Size Comparison
 
-To contextualize the "smallest" claim, the table below compares the physical and firmware dimensions of this project against other well-known historical and hardware-based Enigma implementations.
+To contextualize the "smallest" claim, the table below compares the physical dimensions of this project against other well-known historical and hardware-based Enigma implementations.
 
-| Implementation | Type | Physical Footprint | Firmware/Software Size | Hardware Platform |
-| :--- | :--- | :--- | :--- | :--- |
-| **Historical Enigma M4** | Electromechanical | ~ 340 × 280 × 150 mm (12 kg) | N/A (Mechanical) | N/A |
-| **Enigma-E** (Crypto Museum) | Electronic DIY Kit | ~ 220 × 160 mm (PCB only) | N/A (Proprietary Firmware) | Custom Microcontroller |
-| **Arduino Enigma Simulator** | Touchscreen Emulator | ~ 100 × 70 × 30 mm | ~ 250 KB | Arduino Mega (256KB Flash) |
-| **PicoEnigma** | Pocket Emulator | ~ 100 × 100 × 20 mm | ~ 1 - 2 MB | Raspberry Pi Pico (2MB Flash) |
-| **This Project** | **Embedded Autonomous Emulator** | **23.5 × 18 mm** | **771 KB** | **RP2040-Zero (2MB Flash, 264KB RAM)** |
+| Implementation | Type | Physical Footprint | Hardware Platform |
+| :--- | :--- | :--- | :--- |
+| **Historical Enigma M4** | Electromechanical | ~ 340 × 280 × 150 mm (12 kg) | N/A |
+| **Enigma-E** (Crypto Museum) | Electronic DIY Kit | ~ 220 × 160 mm (PCB only) | Custom Microcontroller |
+| **Arduino Enigma Simulator** | Touchscreen Emulator | ~ 100 × 70 × 30 mm | Arduino Mega |
+| **PicoEnigma** | Pocket Emulator | ~ 100 × 100 × 20 mm | Raspberry Pi Pico |
+| **This Project** | **Embedded Autonomous Emulator** | **23.5 × 18 mm** | **RP2040-Zero** |
 
 ## 5. Verification Methodology
 To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.

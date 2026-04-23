@@ -43,7 +43,7 @@ In pursuit of the absolute minimal size, the following technical constraints app
     *   **ROM/File System**: 2MB of on-board Flash memory for firmware and logic payloads
 *   **Enigma Machine Models Implemented**: M3 / M4
 *   **Firmware Dependencies & Architecture**:
-    The system execution is driven by a runtime layer  (**MicroPython ESP32 GENERIC v1.26.1 build 20250911**) and two custom-built, highly optimized application libraries developed by the claimant:
+    The system execution is driven by **MicroPython v1.26.1** runtime and two custom-built, highly optimized application libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
     2.  **[enigma-python (v3.1.2)](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
 

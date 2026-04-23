@@ -13,8 +13,6 @@ To ensure strict adherence to the record title, the following terms are technica
 
 *   **Smallest**: The record is defined by three primary dimensions of miniaturization:
     *   **Physical Hardware Footprint**: The physical dimensions of the self-contained hardware emulator
-    *   **Software/Firmware Size**: The total compiled software payload footprint
-    *   **Computational Resources**: The strict hardware constraints imposed on the system, specifically concerning CPU capability, volatile memory (RAM), and non-volatile storage (ROM/File System)
 *   **Documented**: Every physical and software aspect of the record-attempting device is exhaustively documented to ensure it is fully reproducible, challengeable, and verifiable by independent adjudicators.
 *   **Computationally Autonomous**: All encryption and decryption operations MUST be executed entirely on the physical device itself, without offloading any computation or relying on network calls. However, given the intentionally constrained hardware memory, the emulator is not required to buffer an entire message simultaneously; rather, the external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
 *   **Enigma Machine Emulator**: The system must cryptographically mirror the behavior of the historical machine, explicitly handling:
@@ -35,17 +33,23 @@ In pursuit of the absolute minimal size, the following technical constraints app
 
 *   **Physical Hardware Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
-*   **Total firmware size in KB (UF2), including runtime and frozen modules**: 771 KB
-*   **Computational Resources**:
-    *   **HW Model**: WaveShare RP2040-Zero
-    *   **CPU**: Dual-core ARM Cortex-M0+ processor (flexible clock up to 133 MHz)
-    *   **RAM**: 264KB of SRAM for execution
-    *   **ROM/File System**: 2MB of on-board Flash memory for firmware and logic payloads
 *   **Enigma Machine Models Implemented**: M3 / M4
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by **MicroPython v1.26.1** runtime and two custom-built, highly optimized application libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
     2.  **[enigma-python (v3.1.2)](https://github.com/denismaggior8/enigma-python)** MicroPython-specific implementation that serves as the cryptographic engine, allowing the Enigma logic to execute autonomously.
+
+### Size Comparison
+
+To contextualize the "smallest" claim, the table below compares the physical and firmware dimensions of this project against other well-known historical and hardware-based Enigma implementations.
+
+| Implementation | Type | Physical Footprint | Firmware/Software Size | Hardware Platform |
+| :--- | :--- | :--- | :--- | :--- |
+| **Historical Enigma M4** | Electromechanical | ~ 340 × 280 × 150 mm (12 kg) | N/A (Mechanical) | N/A |
+| **Enigma-E** (Crypto Museum) | Electronic DIY Kit | ~ 220 × 160 mm (PCB only) | N/A (Proprietary Firmware) | Custom Microcontroller |
+| **Arduino Enigma Simulator** | Touchscreen Emulator | ~ 100 × 70 × 30 mm | ~ 250 KB | Arduino Mega (256KB Flash) |
+| **PicoEnigma** | Pocket Emulator | ~ 100 × 100 × 20 mm | ~ 1 - 2 MB | Raspberry Pi Pico (2MB Flash) |
+| **This Project** | **Embedded Autonomous Emulator** | **23.5 × 18 mm** | **771 KB** | **RP2040-Zero (2MB Flash, 264KB RAM)** |
 
 ## 5. Verification Methodology
 To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.

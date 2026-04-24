@@ -72,7 +72,7 @@ In the following table, we summarize the Verification Kits provided in this repo
 
 
 
-| Verification Script | Verification Command | Execution Status | Output Log | Video |
+| Verification Script | Verification Command | Execution Status | Output Log | Terminal Recording |
 | :--- | :--- | :---: | :--- | :--- |
 | [`verify_p1030700.sh`](./tests/verify_p1030700.sh) | `asciinema rec -q -c "./tests/verify_p1030700.sh" video/video_p1030700.cast --overwrite \| tee logs/verify_p1030700.log` | ✅ VERIFIED | [`verify_p1030700.log`](./logs/verify_p1030700.log) | [`video_p1030700.cast`](./video/video_p1030700.cast) |
 

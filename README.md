@@ -1,7 +1,7 @@
 # Technical Specifications: Guinness World Record Attempt
 
 ## Record Title
-**"The smallest, computationally autonomous Enigma machine emulator, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
+**"The smallest, computationally autonomous Enigma M4 machine emulator, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
 
 ---
 
@@ -14,32 +14,40 @@
 ---
 
 ## 1. Executive Summary
-This repository serves as the official Technical Specifications/Implementations document for a Guinness World Records attempt. The objective is to design, deploy, and verify the smallest possible self-contained Enigma machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Enigma machine (such as the M3 or M4) and can successfully decrypt historical ciphertexts.
+This repository serves as the official Technical Specifications/Implementations document for a Guinness World Records attempt. The objective is to design, deploy, and verify the smallest possible self-contained Enigma M4 machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Kriegsmarine Enigma M4 machine and can successfully decrypt historical ciphertexts.
 
 ## 2. Claim Definition & Scope
 To ensure strict adherence to the record title, the following terms are technically defined:
 
 *   **Smallest**: The record is defined by the **Physical Hardware Footprint** (The physical dimensions of the self-contained hardware emulator)
 *   **Computationally Autonomous**: All encryption and decryption operations MUST be executed entirely on the physical device itself, without offloading any computation or relying on network calls. However, given the intentionally constrained hardware memory, the emulator is not required to buffer an entire message simultaneously; rather, the external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
-*   **Enigma Machine Emulator**: The system must cryptographically mirror the behavior of the historical machine, explicitly handling:
+*   **Enigma M4 Machine Emulator**: The system must cryptographically mirror the behavior of the historical Naval M4 machine, explicitly handling:
+    *   4-Rotor architecture (3 standard rotors + 1 thin 'Zusatzwalze' rotor).
+    *   Thin Reflector (*Umkehrwalze* B or C).
     *   Rotor wiring and stepping (including double-stepping anomalies).
     *   Rotor settings (*Grundstellung* + *Ringstellung*).
-    *   Reflector (*Umkehrwalze*).
     *   Plugboard (*Steckerbrett*).
 *   **Original 1945-era Ciphertexts**: The emulator must be validated against known, historically accurate messages, provided with correct key settings.
 
+## 3. Original Enigma M4 Hardware Specifications
+To provide a physical baseline for the miniaturization claim, the original electromechanical Enigma M4 (introduced in 1942 for the German U-boat fleet) had the following characteristics:
+*   **Physical Dimensions:** ~ 340 mm (width) × 280 mm (depth) × 150 mm (height)
+*   **Weight:** ~ 12 kg (26 lbs)
+*   **Construction:** Heavy wooden casing housing a die-cast metal chassis.
+*   **Interface:** 26-key typewriter-style mechanical keyboard and a 26-bulb lightboard (*Lampenfeld*).
+*   **Power Source:** Internal 4-volt battery or external transformer.
 
-## 3. Technical Constraints & Design Rules
+## 4. Technical Constraints & Design Rules
 In pursuit of the absolute minimal size, the following technical constraints apply to the implementation:
 1.  **Input/Output**: The system must provide a deterministic way to input the key settings (Rotor selection, Ring settings, Plugboard connections, initial positions) and the ciphertext, and output the plaintext.
 2.  **No Pre-computed Tables**: The emulator cannot use massive pre-computed look-up tables to bypass the algorithmic implementation of the Enigma machine, as this violates the spirit of "emulation."
 3.  **Language**: The specific programming language (e.g., Python, C, Assembly) will be selected based on its capacity for lexical minimalism or binary footprint. 
 
-## 4. Architecture & Implementation
+## 5. Architecture & Implementation
 
 *   **Physical Hardware Footprint**: 23.5 × 18 mm
     <br><img src="https://www.waveshare.com/w/upload/f/f4/900px-RP2040-Zero-details-size.jpg" alt="RP2040-Zero Physical Dimensions Diagram" width="500">
-*   **Enigma Machine Models Implemented**: M3 / M4
+*   **Enigma Machine Model Implemented**: M4
 *   **Firmware Dependencies & Architecture**:
     The system execution is driven by **MicroPython v1.26.1** runtime and two custom-built, highly optimized application libraries developed by the claimant:
     1.  **[enigma-core (v1.0.1)](https://github.com/denismaggior8/enigma-core)**: The top-level firmware responsible for device boot, user interaction, logic orchestration, and accepting/persisting machine configurations.
@@ -57,27 +65,27 @@ To contextualize the "smallest" claim, the table below compares the physical dim
 | **PicoEnigma** | Pocket Emulator | ~ 100 × 100 × 20 mm | Raspberry Pi Pico |
 | **This Project** | **Embedded Autonomous Emulator** | **23.5 × 18 mm** | **RP2040-Zero** |
 
-## 5. Measurement Methodology
+## 6. Measurement Methodology
 To satisfy the strict requirements of the "smallest" claim, the physical hardware footprint must be meticulously measured and documented.
 *   **Measurement Instrument:** `[e.g., Calibrated Digital Calipers, Model XYZ]`
 *   **Methodology:** The dimensions are measured at the widest and longest points of the main printed circuit board (PCB), excluding any removable peripheral jumper wires used temporarily for I/O.
 *   **Photographic Evidence:** `[Insert link/reference to high-resolution photos showing the calipers reading the exact dimensions of the board]`
 
-## 6. Independent Witnesses
+## 7. Independent Witnesses
 GWR requires independent specialist witnesses to verify both the physical measurements and the cryptographic accuracy of the device. The signed statements from the following experts are included in the Evidence Inventory:
 *   **Witness 1:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Professor of Computer Science / Cryptography Expert]`
 *   **Witness 2:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Senior Electrical Engineer]`
 
-## 7. Verification Methodology
+## 8. Verification Methodology
 To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
 
 To facilitate adjudication, this repository provides the following,   reproducible,  **[Verification Kits](./tests)**:
 
 - [`verify_p1030700.sh`](./tests/verify_p1030700.sh) based on the famous U-534 M4 interception preserved by the [Hoerenberg Enigma M4 Project](https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700). This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via `enigma-core` AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.
 
-*Note: While the Verification Kit utilizes/provides some well known M4 message for immediate proof, the emulator is strictly **not** limited to these specific examples. It is a functionally complete replica capable of encrypting or decrypting any authentic M3/M4 Enigma configuration.*
+*Note: While the Verification Kit utilizes/provides a well known M4 message for immediate proof, the emulator is strictly **not** limited to this specific example. It is a functionally complete replica capable of encrypting or decrypting any authentic M4 Enigma configuration.*
 
-## 8. Evidence Inventory
+## 9. Evidence Inventory
 To formally support the record claim, this repository contains the following indexed exhibits:
 
 *   **Exhibit A: Cover Letter & Application Summary** 
@@ -110,7 +118,7 @@ In the following table, we summarize the Verification Kits provided in this repo
 
 *Note: The **Video Demonstrations** have been recorded using [asciinema](https://asciinema.org/) to faithfully capture standard output directly from the hardware execution. You can seamlessly replay any `.cast` file linked above by running `asciinema play <file.cast>` in your terminal (e.g., `asciinema play recs/rec_p1030700.cast`).*
 
-## 9. Supersession Criteria
+## 10. Supersession Criteria
 
 To officially supersede this record, a competing implementation must demonstrate a strictly smaller physical footprint than the benchmark established here, while maintaining full historical cryptographic accuracy and computational autonomy.
 

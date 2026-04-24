@@ -1,7 +1,15 @@
 # Technical Specifications: Guinness World Record Attempt
 
 ## Record Title
-**"The smallest, computationally autonomous Enigma machine emulator running on embedded hardware, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
+**"The smallest, computationally autonomous Enigma machine emulator, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
+
+---
+
+## Guinness World Records Application Details
+*   **Application Reference Number:** `[Insert GWR Application ID]`
+*   **Applicant Name:** `[Your Name / Team Name]`
+*   **Date of Attempt:** `[Insert Date]`
+*   **Location of Attempt:** `[City, Country]`
 
 ---
 
@@ -49,7 +57,18 @@ To contextualize the "smallest" claim, the table below compares the physical dim
 | **PicoEnigma** | Pocket Emulator | ~ 100 × 100 × 20 mm | Raspberry Pi Pico |
 | **This Project** | **Embedded Autonomous Emulator** | **23.5 × 18 mm** | **RP2040-Zero** |
 
-## 5. Verification Methodology
+## 5. Measurement Methodology
+To satisfy the strict requirements of the "smallest" claim, the physical hardware footprint must be meticulously measured and documented.
+*   **Measurement Instrument:** `[e.g., Calibrated Digital Calipers, Model XYZ]`
+*   **Methodology:** The dimensions are measured at the widest and longest points of the main printed circuit board (PCB), excluding any removable peripheral jumper wires used temporarily for I/O.
+*   **Photographic Evidence:** `[Insert link/reference to high-resolution photos showing the calipers reading the exact dimensions of the board]`
+
+## 6. Independent Witnesses
+GWR requires independent specialist witnesses to verify both the physical measurements and the cryptographic accuracy of the device. The signed statements from the following experts are included in the Evidence Inventory:
+*   **Witness 1:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Professor of Computer Science / Cryptography Expert]`
+*   **Witness 2:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Senior Electrical Engineer]`
+
+## 7. Verification Methodology
 To satisfy Guinness World Records adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages"). Furthermore, to explicitly validate the reciprocal nature of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
 
 To facilitate adjudication, this repository provides the following,   reproducible,  **[Verification Kits](./tests)**:
@@ -58,15 +77,29 @@ To facilitate adjudication, this repository provides the following,   reproducib
 
 *Note: While the Verification Kit utilizes/provides some well known M4 message for immediate proof, the emulator is strictly **not** limited to these specific examples. It is a functionally complete replica capable of encrypting or decrypting any authentic M3/M4 Enigma configuration.*
 
-## 6. Evidence Collection
-To support the record claim, this repository will eventually contain:
-1.  **Firmware and Libraries Source Code**: A reference to the source codes of all the employed software parts (firmware + enigma libraries), available at:
-    - [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
-        - **Board Firmware**: [`enigma-core_firmware_v1.0.1_RPI_PICO.uf2`](https://github.com/denismaggior8/enigma-core/releases/download/v1.0.1/enigma-core_firmware_v1.0.1_RPI_PICO.uf2) (SHA256: `791bf4c142088071c10815574e90e70b8020713cc935afbc9a3e3f105b71db0d`)
-    - [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
-2.  **Video Demonstration**: Raw, unedited footage of the verification and the test vector decryption run.
-3.  **[Log Files](./logs)**: This repository explicitly contains the raw, unedited standard output logs (`.log` files) produced by every Verification Kit script execution. These files permanently document the exact, real-time AT commands, decryption streams, and reverse-encryption processes as well as the test status.
+## 8. Evidence Inventory
+To formally support the record claim, this repository contains the following indexed exhibits:
 
+*   **Exhibit A: Cover Letter & Application Summary** 
+    *   `[Link to Cover Letter PDF]`
+*   **Exhibit B: Unbroken Video Evidence** 
+    *   *Requirement:* A continuous, unedited physical camera recording showing the hardware board, the measurement process, and the real-time decryption output on the monitor simultaneously.
+    *   `[Link to Raw Video File]`
+*   **Exhibit C: Photographic Evidence**
+    *   High-resolution images of the board and the measurement process.
+    *   `[Link to Photo Directory]`
+*   **Exhibit D: System Logs & Terminal Casts**
+    *   The raw, unedited standard output logs (`.log` files) and interactive terminal recordings (`.cast` files) documenting the exact AT commands, decryption streams, and reverse-encryption processes.
+    *   *(See Verification Kits table below)*
+*   **Exhibit E: Witness Statements**
+    *   Signed declarations from the independent witnesses.
+    *   `[Link to Witness Statements PDF]`
+*   **Exhibit F: Source Code & Firmware**
+    *   [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
+        *   **Board Firmware**: [`enigma-core_firmware_v1.0.1_RPI_PICO.uf2`](https://github.com/denismaggior8/enigma-core/releases/download/v1.0.1/enigma-core_firmware_v1.0.1_RPI_PICO.uf2) (SHA256: `791bf4c142088071c10815574e90e70b8020713cc935afbc9a3e3f105b71db0d`)
+    *   [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
+
+### Verification Kits (Part of Exhibit D)
 In the following table, we summarize the Verification Kits provided in this repository, detailing their execution commands, completion status, output logs, and native video recordings:
 
 
@@ -77,7 +110,7 @@ In the following table, we summarize the Verification Kits provided in this repo
 
 *Note: The **Video Demonstrations** have been recorded using [asciinema](https://asciinema.org/) to faithfully capture standard output directly from the hardware execution. You can seamlessly replay any `.cast` file linked above by running `asciinema play <file.cast>` in your terminal (e.g., `asciinema play recs/rec_p1030700.cast`).*
 
-## 7. Supersession Criteria
+## 9. Supersession Criteria
 
 To officially supersede this record, a competing implementation must demonstrate a strictly smaller physical footprint than the benchmark established here, while maintaining full historical cryptographic accuracy and computational autonomy.
 

@@ -1,7 +1,7 @@
 # Technical Specifications: Guinness World Record Attempt
 
 ## Record Title
-**"The smallest, documented, computationally autonomous Enigma machine emulator running on embedded hardware, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
+**"The smallest, computationally autonomous Enigma machine emulator running on embedded hardware, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."**
 
 ---
 
@@ -12,7 +12,6 @@ This repository serves as the official Technical Specifications/Implementations 
 To ensure strict adherence to the record title, the following terms are technically defined:
 
 *   **Smallest**: The record is defined by the **Physical Hardware Footprint** (The physical dimensions of the self-contained hardware emulator)
-*   **Documented**: Every physical and software aspect of the record-attempting device is exhaustively documented to ensure it is fully reproducible, challengeable, and verifiable by independent adjudicators.
 *   **Computationally Autonomous**: All encryption and decryption operations MUST be executed entirely on the physical device itself, without offloading any computation or relying on network calls. However, given the intentionally constrained hardware memory, the emulator is not required to buffer an entire message simultaneously; rather, the external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
 *   **Enigma Machine Emulator**: The system must cryptographically mirror the behavior of the historical machine, explicitly handling:
     *   Rotor wiring and stepping (including double-stepping anomalies).

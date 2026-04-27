@@ -74,10 +74,9 @@ To formally support the record claim, this repository contains the following ind
 *   **Exhibit E: Witness Statements**
     *   Signed declarations from the independent witnesses.
     *   `[Link to Witness Statements PDF]`
-*   **Exhibit F: Source Code & Firmware**
-    *   [enigma-core v1.0.1](https://github.com/denismaggior8/enigma-core/releases/tag/v1.0.1)
-        *   **Board Firmware**: [`enigma-core_firmware_v1.0.1_RPI_PICO.uf2`](https://github.com/denismaggior8/enigma-core/releases/download/v1.0.1/enigma-core_firmware_v1.0.1_RPI_PICO.uf2) (SHA256: `791bf4c142088071c10815574e90e70b8020713cc935afbc9a3e3f105b71db0d`)
-    *   [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
+*   **Exhibit F: Library Source Code & Board Firmware**
+    *   **Board Firmware**: [`enigma-core_firmware_v1.0.1_RPI_PICO.uf2`](https://github.com/denismaggior8/enigma-core/releases/download/v1.0.1/enigma-core_firmware_v1.0.1_RPI_PICO.uf2) (SHA256: `791bf4c142088071c10815574e90e70b8020713cc935afbc9a3e3f105b71db0d`)
+    *   **Enigma Library Source Code**: [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
 
 ---
 *Maintained for Guinness World Record Adjudication.*

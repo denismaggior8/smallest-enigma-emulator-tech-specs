@@ -2,9 +2,9 @@
 
 ## 1. Guinness World Records Application Details
 *   **Application Reference Number:** `[Insert GWR Application ID]`
-*   **Applicant Name:** `[Your Name / Team Name]`
+*   **Applicant Name:** `Denis Maggiorotto`
 *   **Date of Attempt:** `[Insert Date]`
-*   **Location of Attempt:** `[City, Country]`
+*   **Location of Attempt:** `Chieri (Turin), Italy`
 *   **Hardware Platform:** [WaveShare RP2040-Tiny](https://www.waveshare.com/rp2040-tiny.htm?srsltid=AfmBOopdHzICTJyQRDJfgRg1Y4STzqKt4vT1tkt6pyTvpTrWu_gPU1E2)
 
 ## 2. Emulator Implementation Architecture

@@ -9,10 +9,10 @@
 
 ## 2. Emulator Implementation Architecture
 
-The core of this attempt relies on the **[enigma-core](https://github.com/denismaggior8/enigma-core)** library, a standalone, embedded-ready Enigma machine simulator built by the claimant specifically for extremely constrained microcontrollers. The implementation leverages the following architectural features to achieve computational autonomy:
+The core of this attempt relies exclusively on **RP2040-based microcontroller boards**, the **[enigma-python](https://github.com/denismaggior8/enigma-python)** cryptographic library, and the **MicroPython** runtime. The implementation leverages the following architectural features to achieve computational autonomy:
 
 *   **AT Command Interface:** The device operates seamlessly as a hardware peripheral, accepting configuration settings and streaming ciphertexts via a classic, modem-style AT command interface over a USB serial connection.
-*   **MicroPython Foundation:** Written in pure Python, the firmware executes directly on the RP2040-Tiny using the MicroPython runtime, allowing complex cryptographic algorithms to run efficiently on embedded hardware.
+*   **MicroPython Foundation:** Written in pure Python, the firmware executes directly on RP2040-based microcontrollers using the MicroPython runtime, allowing complex cryptographic algorithms to run efficiently on embedded hardware.
 *   **Handler-Based Dispatching:** Commands are implemented as isolated, runtime-loaded modules, ensuring a clean separation between I/O parsing and the actual cryptographic processing engine.
 *   **Centralized State & Memory Management:** The emulator utilizes a strict Device State Singleton to maintain rotor positions securely in memory. To survive the severe RAM limitations of the hardware, it triggers automatic memory cleanup (garbage collection hooks) after state changes, making it capable of processing the lengthy, historically authentic ciphertexts required for validation.
 

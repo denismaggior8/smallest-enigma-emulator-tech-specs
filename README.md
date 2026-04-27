@@ -16,6 +16,8 @@ The Enigma machine was a famously complex electro-mechanical rotor cipher device
 
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Bletchley_Park_Naval_Enigma_IMG_3604.JPG" alt="Enigma M4 Model" width="400">
+  <br>
+  <em>Bletchley Park Naval Enigma</em>
 </p>
 
 ***Beyond the technical challenge of extreme miniaturization, this record attempt serves a broader purpose. It is intended to focus public attention on the paramount importance of scientific research, specifically in the field of cryptography. The cryptographic breakthroughs achieved during the latter stages of World War II were the main drivers of crucial historical events, ultimately shaping not only the outcome of the conflict but the foundation of our modern, digitally interconnected world.***

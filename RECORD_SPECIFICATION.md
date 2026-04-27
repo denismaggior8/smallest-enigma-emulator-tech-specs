@@ -136,5 +136,6 @@ Provided that the emulator strictly meets the functional specification of the En
 ---
 
 ## 9. Supersession Criteria
+Each record attempt must demonstrate independent implementation and full compliance with the functional and validation requirements defined in this specification.
 
 To officially supersede this record, a competing implementation must demonstrate a strictly smaller physical volume (mm³) than the benchmark established here, while maintaining full historical cryptographic accuracy and computational autonomy as defined in this specification.

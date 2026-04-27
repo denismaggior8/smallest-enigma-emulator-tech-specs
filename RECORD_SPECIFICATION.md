@@ -40,7 +40,9 @@ Where:
 
 ### 3.2 Measurement Method
 
-The minimum axis-aligned bounding box enclosing the device is used. All measurements must be meticulously recorded using highly precise instruments, such as **Calibrated Digital Calipers**. The dimensions must be taken at the widest, longest, and highest points of the assembled emulator.
+The physical size of the emulator MUST be measured using an **orthogonal, axis-aligned bounding box** method using calibrated digital calipers.
+
+To prevent artificial volume reduction, the measurement axes (Length, Width, Height) must be strictly orthogonal (perpendicular) to each other and aligned with the primary geometric axes of the device's main PCB or enclosure. Diagonal measurements, rotation within the bounding box to minimize the footprint, contour-following, or calculating the aggregate volume of individual components are strictly prohibited. The bounding box must completely encapsulate the entire assembled, functional unit.
 
 ---
 
@@ -86,7 +88,10 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 In pursuit of a legitimate "emulator," the following constraints apply:
 
 - **No Pre-computed Ciphertext Tables:** The emulator cannot use massive look-up tables containing pre-computed ciphertexts to bypass the algorithmic implementation of the Enigma machine. (Note: The use of data structures or lookup tables used exclusively to define the static internal wirings of the historical rotors and reflectors is permitted and required).
-- **Computationally Autonomous:** All encryption and decryption operations MUST be executed entirely on the physical device itself. Offloading computation to external servers or network calls is strictly prohibited.
+- **Computationally Autonomous & Self-Contained:** All encryption and decryption operations MUST be executed entirely on the physical device itself using only its own internal processor and memory. Offloading computation to external servers or network calls is strictly prohibited. To clarify "self-contained operation":
+    - *Power Source:* External power supplies or batteries are permitted (and are excluded from the volume measurement) provided they supply *only* power and contain no computational logic or data side-channels.
+    - *I/O Expectations:* External I/O interfaces (such as a USB serial connection) are permitted for the sole purpose of transmitting key configurations, streaming input ciphertexts, and reading the output plaintexts. The external client connected to the I/O interface MUST NOT perform any part of the Enigma cryptographic algorithm. It is explicitly permitted for a single USB cable to simultaneously supply power and serve as the I/O interface.
+    - *Initialization Conditions:* The device must be capable of receiving a full state reset and processing a new M4 configuration from a cold boot, without relying on persistent external state or configuration files from a host machine.
 - **No Hardcoded Outputs:** The system must deterministically process the input based solely on the provided key settings, without hardcoded historical solutions.
 
 ---
@@ -102,6 +107,13 @@ Each test vector must define:
 
 The output must match exactly. Furthermore, to explicitly validate the **reciprocal nature** of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
 
+### 6.1 Test Vector Trust Chain
+To establish an unassailable trust chain for the test vectors, the validation procedure must adhere to the following:
+- **Source of Truth:** All ciphertexts and their corresponding key settings and plaintexts must be sourced from publicly recognized, peer-reviewed historical archives (e.g., the Hoerenberg Enigma M4 Project).
+- **Reference Implementation:** The correctness of the chosen test vectors must be independently verifiable against recognized, standard software Enigma simulators (such as Universal Enigma or those provided by the Crypto Museum) to prove the baseline is accurate.
+- **Reproducibility Method:** The validation process must be fully reproducible. The applicant must provide automated execution tools (e.g., shell scripts) that deterministically feed the configuration and ciphertext to the emulator, allowing adjudicators to easily replicate the exact test conditions and verify the output.
+
+### 6.2 Validation Exceptions
 - **Batched Processing Exception:** Given the intentionally constrained hardware memory of miniaturized devices, the emulator is *not* required to buffer an entire historical message simultaneously during validation. The external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
 
 ---

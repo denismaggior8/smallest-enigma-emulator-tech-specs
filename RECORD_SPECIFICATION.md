@@ -115,3 +115,9 @@ The applicant must provide rigorous proof of the claim. A complete Evidence Inve
 ## 8. Final Statement
 
 Provided that the emulator strictly meets the functional specification of the Enigma M4, the record is determined by its minimum measured volume (mm³).
+
+---
+
+## 9. Supersession Criteria
+
+To officially supersede this record, a competing implementation must demonstrate a strictly smaller physical volume (mm³) than the benchmark established here, while maintaining full historical cryptographic accuracy and computational autonomy as defined in this specification.

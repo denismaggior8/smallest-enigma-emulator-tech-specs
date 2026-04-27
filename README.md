@@ -1,6 +1,6 @@
 # Smallest Enigma Emulator: Guinness World Record Attempt
 
-**Record Title:** "The smallest, computationally autonomous Enigma M4 machine emulator, capable of decrypting original 1945-era Enigma ciphertexts when provided with correct key settings."
+**Record Title:** "The smallest volume (mm³) of a self-contained hardware device capable of executing a fully functional M4 Enigma cipher algorithm."
 
 ## Introduction
 

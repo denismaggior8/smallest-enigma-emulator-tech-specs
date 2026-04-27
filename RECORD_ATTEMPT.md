@@ -7,7 +7,16 @@
 *   **Location of Attempt:** `[City, Country]`
 *   **Hardware Platform:** WaveShare RP2040-Zero
 
-## 2. Measurement Results & Methodology
+## 2. Emulator Implementation Architecture
+
+The core of this attempt relies on the **[enigma-core](https://github.com/denismaggior8/enigma-core)** library, a standalone, embedded-ready Enigma machine simulator built specifically for extremely constrained microcontrollers. The implementation leverages the following architectural features to achieve computational autonomy:
+
+*   **AT Command Interface:** The device operates seamlessly as a hardware peripheral, accepting configuration settings and streaming ciphertexts via a classic, modem-style AT command interface over a USB serial connection.
+*   **MicroPython Foundation:** Written in pure Python, the firmware executes directly on the RP2040-Zero using the MicroPython runtime, allowing complex cryptographic algorithms to run efficiently on embedded hardware.
+*   **Handler-Based Dispatching:** Commands are implemented as isolated, runtime-loaded modules, ensuring a clean separation between I/O parsing and the actual cryptographic processing engine.
+*   **Centralized State & Memory Management:** The emulator utilizes a strict Device State Singleton to maintain rotor positions securely in memory. To survive the severe RAM limitations of the hardware, it triggers automatic memory cleanup (garbage collection hooks) after state changes, making it capable of processing the lengthy, historically authentic ciphertexts required for validation.
+
+## 3. Measurement Results & Methodology
 To satisfy the strict requirements of the "smallest volume" claim, the physical hardware footprint of the assembled emulator was meticulously measured and documented according to the axis-aligned bounding box method.
 
 *   **Measured Dimensions:** 23.5 mm (L) × 18.0 mm (W) × `[Insert Height]` mm (H)
@@ -16,12 +25,12 @@ To satisfy the strict requirements of the "smallest volume" claim, the physical 
 *   **Methodology:** The dimensions were taken at the widest, longest, and highest points of the assembled RP2040-Zero board, explicitly including the PCB, components, connectors, and solder joints, while excluding temporary I/O jumper wires.
 *   **Photographic Evidence:** `[Insert link/reference to high-resolution photos showing the calipers reading the exact L, W, and H dimensions of the board]`
 
-## 3. Independent Witnesses
+## 4. Independent Witnesses
 GWR requires independent specialist witnesses to verify both the physical measurements and the cryptographic accuracy of the device. The signed statements from the following experts are included in the Evidence Inventory:
 *   **Witness 1:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Professor of Computer Science / Cryptography Expert]`
 *   **Witness 2:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Senior Electrical Engineer]`
 
-## 4. Cryptographic Validation
+## 5. Cryptographic Validation
 In accordance with the validation procedures defined in the specifications, the emulator's cryptographic accuracy and reciprocity were rigorously tested against authentic historical interceptions.
 
 This attempt utilizes the following reproducible **[Verification Kit](./tests)** to demonstrate compliance:
@@ -30,7 +39,7 @@ This attempt utilizes the following reproducible **[Verification Kit](./tests)**
 
 *Note: While the Verification Kit utilizes/provides a well known M4 message for immediate proof, the emulator is strictly **not** limited to this specific example. It is a functionally complete replica capable of encrypting or decrypting any authentic M4 Enigma configuration.*
 
-## 5. Evidence Inventory
+## 6. Evidence Inventory
 To formally support the record claim, this repository contains the following indexed exhibits:
 
 *   **Exhibit A: Cover Letter & Application Summary** 

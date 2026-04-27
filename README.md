@@ -3,7 +3,7 @@
 **Record Title:** "The smallest volume (mm³) of a self-contained hardware device capable of executing a fully functional M4 Enigma cipher algorithm."
 
 <p align="center">
-  <img src="./img/cover.png" alt="Miniaturising History: The World's Smallest Enigma M4 Emulator">
+  <img src="./img/cover.jpg" alt="Miniaturising History: The World's Smallest Enigma M4 Emulator">
 </p>
 
 ## Introduction

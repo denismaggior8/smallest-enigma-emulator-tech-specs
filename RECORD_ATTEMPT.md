@@ -75,20 +75,18 @@ AT+PLUGBOARD=L,G
 AT+PLUGBOARD=S,Z
 AT+PLUGBOARD=P,K
 AT+PLUGBOARD=D,I
-AT+PLUGBOARD=Q,B
+AT+PLUGBOARD=Q,B 
 
 # 4. Stream historical ciphertext to the device 
-# (Send characters individually; the device replies with the decrypted letter)
-Q
-B
-H
-E
-W
-T
-D
-F
-E
-Q
+# (Send characters individually; the device replies with the decrypted letter and OK for each character)
+k
+OK
+o
+OK
+m
+OK
+x
+OK
 ```
 
 ## 7. Evidence Inventory

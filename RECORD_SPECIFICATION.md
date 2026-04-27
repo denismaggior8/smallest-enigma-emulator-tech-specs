@@ -85,7 +85,7 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 
 In pursuit of a legitimate "emulator," the following constraints apply:
 
-- **No Pre-computed Tables:** The emulator cannot use massive pre-computed look-up tables (e.g., storing all possible ciphertexts) to bypass the algorithmic implementation of the Enigma machine.
+- **No Pre-computed Ciphertext Tables:** The emulator cannot use massive look-up tables containing pre-computed ciphertexts to bypass the algorithmic implementation of the Enigma machine. (Note: The use of data structures or lookup tables used exclusively to define the static internal wirings of the historical rotors and reflectors is permitted and required).
 - **Computationally Autonomous:** All encryption and decryption operations MUST be executed entirely on the physical device itself. Offloading computation to external servers or network calls is strictly prohibited.
 - **No Hardcoded Outputs:** The system must deterministically process the input based solely on the provided key settings, without hardcoded historical solutions.
 

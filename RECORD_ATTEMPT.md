@@ -48,6 +48,46 @@ To ensure complete transparency and allow adjudicators to independently verify t
 2. **Flash Firmware:** Connect the board via USB and drag-and-drop the pre-compiled `.uf2` firmware image (provided in the Evidence Inventory) directly onto the drive to initialize the bare-metal emulator.
 3. **Execute Verification:** Run the `verify_p1030700.sh` script against the attached serial port to deterministically reproduce the historical cryptographic decryption.
 
+Alternatively, adjudicators can manually reproduce the behavior by communicating with the board over any standard serial terminal (e.g., PuTTY, minicom, or screen). Below is the exact sequence of AT commands needed to initialize the historically accurate M4 configuration and decipher the first few characters of the P1030700 message:
+
+```text
+# 1. Initialize M4 Model and B-Thin Reflector
+AT+ENIGMA=M4
+AT+REFLECTOR=BT # It could be CT for C-Thin Reflector
+
+# 2. Configure Rotors (Fast to Slow, including Greek static rotor)
+# Format: AT+ROTOR=<idx>,<type>,<ring_setting>,<initial_pos>
+AT+ROTOR=0,VIII,20,2 # According to specs, available rotors are: I, II, III, IV, V, VI, VII, VIII
+AT+ROTOR=1,III,2,6 # According to the specs, available rotors are: I, II, III, IV, V, VI, VII, VIII
+AT+ROTOR=2,IV,0,12 # According to the specs, available rotors are: I, II, III, IV, V, VI, VII, VIII
+AT+ROTOR=3,G,0,21 # According to the specs, available Greek rotors are: B (Beta) or G (Gamma) 
+
+# 3. Configure Plugboard connections (Steckerbrett)
+AT+PLUGBOARD=C,H
+AT+PLUGBOARD=E,J
+AT+PLUGBOARD=N,V
+AT+PLUGBOARD=O,U
+AT+PLUGBOARD=T,Y
+AT+PLUGBOARD=L,G
+AT+PLUGBOARD=S,Z
+AT+PLUGBOARD=P,K
+AT+PLUGBOARD=D,I
+AT+PLUGBOARD=Q,B
+
+# 4. Stream historical ciphertext to the device 
+# (Send characters individually; the device replies with the decrypted letter)
+Q
+B
+H
+E
+W
+T
+D
+F
+E
+Q
+```
+
 ## 7. Evidence Inventory
 To formally support the record claim, this repository contains the following indexed exhibits:
 

@@ -8,7 +8,7 @@ This repository serves as the official entry point for the Technical Specificati
 
 The objective is to design, deploy, and verify the smallest possible self-contained Enigma M4 machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Kriegsmarine Enigma M4 machine and can successfully decrypt historical ciphertexts.
 
-Beyond the technical challenge of extreme miniaturization, this record attempt serves a broader purpose. It is intended to focus public attention on the paramount importance of scientific research—specifically the field of cryptography. The cryptographic breakthroughs achieved during the latter stages of World War II were the main drivers of crucial historical events, ultimately shaping not only the outcome of the conflict but the foundation of our modern, digitally interconnected world.
+Beyond the technical challenge of extreme miniaturization, this record attempt serves a broader purpose. It is intended to focus public attention on the paramount importance of scientific research, specifically in the field of cryptography. The cryptographic breakthroughs achieved during the latter stages of World War II were the main drivers of crucial historical events, ultimately shaping not only the outcome of the conflict but the foundation of our modern, digitally interconnected world.
 
 To facilitate adjudication and public review, the documentation has been organized into two primary documents:
 

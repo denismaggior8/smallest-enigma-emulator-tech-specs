@@ -74,6 +74,10 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 - **Plugboard (*Steckerbrett*):** Allowing for arbitrary letter pairings.
 - **Correct Rotor Stepping:** Accurately mirroring the mechanical stepping mechanism, including the infamous historical "double-stepping" anomalies of the middle rotor.
 
+*For historical and technical reference on the original Naval M4 Enigma, please consult:*
+*   [Wikipedia: Enigma-M4](https://en.wikipedia.org/wiki/Enigma-M4)
+*   [Crypto Museum: Enigma M4](https://www.cryptomuseum.com/crypto/enigma/m4/)
+
 ---
 
 ## 5. Anti-Cheating Requirements

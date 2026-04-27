@@ -66,12 +66,12 @@ Exclude:
 
 ## 4. Functional Specification — M4 Enigma Emulator
 
-The system must cryptographically mirror the EXACT behavior of the historical Naval M4 machine. The emulator must explicitly implement and handle:
+The system must cryptographically mirror the EXACT behavior of the historical Naval M4 machine. The emulator is required to fully support **ANY historically valid M4 configuration**, not merely a subset. It must explicitly implement and handle:
 
-- **4-Rotor Architecture:** Including 3 standard rotors selected from I-VIII, plus 1 thin 'Zusatzwalze' rotor (Beta or Gamma).
-- **Thin Reflector:** Implementing the specific *Umkehrwalze* B or C logic.
-- **Rotor Settings:** Full support for *Grundstellung* (initial position) and *Ringstellung* (ring settings).
-- **Plugboard (*Steckerbrett*):** Allowing for arbitrary letter pairings.
+- **Comprehensive 4-Rotor Architecture:** It must support the use of all 8 standard WWII Naval rotors (I, II, III, IV, V, VI, VII, VIII) in the three right-most positions, plus either of the 2 thin *Zusatzwalze* rotors (Beta or Gamma) in the fourth position.
+- **Thin Reflectors:** It must implement both historical thin reflectors (*Umkehrwalze* "B Thin" and "C Thin").
+- **Rotor Settings:** Full support for *Grundstellung* (initial position) and *Ringstellung* (ring settings) across all inserted rotors.
+- **Plugboard (*Steckerbrett*):** Must allow for up to 13 arbitrary standard alphabet (A-Z) letter pairings.
 - **Correct Rotor Stepping:** Accurately mirroring the mechanical stepping mechanism, including the infamous historical "double-stepping" anomalies of the middle rotor.
 - **User Interface Independence:** The physical user interface components of the historical machine (such as the keyboard and lampboard) have been intentionally omitted from this specification. The emulator is permitted to implement any user interface (e.g., a serial connection) provided the core cryptographic algorithm remains intact.
 

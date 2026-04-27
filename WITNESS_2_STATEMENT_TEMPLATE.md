@@ -23,11 +23,11 @@ I, the undersigned, am acting as an independent specialist witness for the Guinn
 
 ## 2. Verification of Cryptographic Functionality
 
-On **`[Date of Verification]`**, at **`[Location of Verification]`**, I personally observed and verified the cryptographic testing of the hardware device (WaveShare RP2040-Zero based emulator) submitted for this record.
+On **`[Date of Verification]`**, at **`[Location of Verification]`**, I personally observed and verified the cryptographic testing of the hardware device (WaveShare RP2040-Tiny based emulator) submitted for this record.
 
 ### 2.1 Hardware Autonomy & Emulation Rules
 I attest to the following operational facts regarding the device:
-- The device operates entirely **computationally autonomously**. All encryption and decryption logic occurred exclusively on the physical RP2040-Zero microcontroller without offloading computations to external servers or networks.
+- The device operates entirely **computationally autonomously**. All encryption and decryption logic occurred exclusively on the physical RP2040-Tiny microcontroller without offloading computations to external servers or networks.
 - The device functioned using a deterministic, algorithmic emulation of the Naval M4 Enigma machine, explicitly without the use of massive pre-computed look-up tables or hardcoded solutions.
 - The device successfully processed ciphertexts streamed iteratively in batches via an AT command serial interface.
 

@@ -5,24 +5,24 @@
 *   **Applicant Name:** `[Your Name / Team Name]`
 *   **Date of Attempt:** `[Insert Date]`
 *   **Location of Attempt:** `[City, Country]`
-*   **Hardware Platform:** WaveShare RP2040-Zero
+*   **Hardware Platform:** [WaveShare RP2040-Tiny](https://www.waveshare.com/rp2040-tiny.htm?srsltid=AfmBOopdHzICTJyQRDJfgRg1Y4STzqKt4vT1tkt6pyTvpTrWu_gPU1E2)
 
 ## 2. Emulator Implementation Architecture
 
 The core of this attempt relies on the **[enigma-core](https://github.com/denismaggior8/enigma-core)** library, a standalone, embedded-ready Enigma machine simulator built by the claimant specifically for extremely constrained microcontrollers. The implementation leverages the following architectural features to achieve computational autonomy:
 
 *   **AT Command Interface:** The device operates seamlessly as a hardware peripheral, accepting configuration settings and streaming ciphertexts via a classic, modem-style AT command interface over a USB serial connection.
-*   **MicroPython Foundation:** Written in pure Python, the firmware executes directly on the RP2040-Zero using the MicroPython runtime, allowing complex cryptographic algorithms to run efficiently on embedded hardware.
+*   **MicroPython Foundation:** Written in pure Python, the firmware executes directly on the RP2040-Tiny using the MicroPython runtime, allowing complex cryptographic algorithms to run efficiently on embedded hardware.
 *   **Handler-Based Dispatching:** Commands are implemented as isolated, runtime-loaded modules, ensuring a clean separation between I/O parsing and the actual cryptographic processing engine.
 *   **Centralized State & Memory Management:** The emulator utilizes a strict Device State Singleton to maintain rotor positions securely in memory. To survive the severe RAM limitations of the hardware, it triggers automatic memory cleanup (garbage collection hooks) after state changes, making it capable of processing the lengthy, historically authentic ciphertexts required for validation.
 
 ## 3. Measurement Results & Methodology
 To satisfy the strict requirements of the "smallest volume" claim, the physical hardware footprint of the assembled emulator was meticulously measured and documented according to the axis-aligned bounding box method.
 
-*   **Measured Dimensions:** 23.5 mm (L) × 18.0 mm (W) × `[Insert Height]` mm (H)
-*   **Calculated Volume:** `[Insert Volume]` mm³
+*   **Measured Dimensions:** 23.5 mm (L) × 18.0 mm (W) × 2.1 mm (H)
+*   **Calculated Volume:** 888.3 mm³
 *   **Measurement Instrument:** Calibrated Digital Calipers `[Insert Model/Serial Number]`
-*   **Methodology:** The dimensions were taken at the widest, longest, and highest points of the assembled RP2040-Zero board, explicitly including the PCB, components, connectors, and solder joints, while excluding temporary I/O jumper wires.
+*   **Methodology:** The dimensions were taken at the widest, longest, and highest points of the assembled RP2040-Tiny board, explicitly including the PCB, components, connectors, and solder joints, while excluding temporary I/O jumper wires.
 *   **Photographic Evidence:** `[Insert link/reference to high-resolution photos showing the calipers reading the exact L, W, and H dimensions of the board]`
 
 ## 4. Independent Witnesses

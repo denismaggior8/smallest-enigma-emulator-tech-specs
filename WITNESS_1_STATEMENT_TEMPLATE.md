@@ -23,7 +23,7 @@ I, the undersigned, am acting as an independent specialist witness for the Guinn
 
 ## 2. Verification of Measurements
 
-On **`[Date of Measurement]`**, at **`[Location of Measurement]`**, I personally observed and verified the physical measurement of the hardware device (WaveShare RP2040-Zero based emulator) submitted for this record.
+On **`[Date of Measurement]`**, at **`[Location of Measurement]`**, I personally observed and verified the physical measurement of the hardware device (WaveShare RP2040-Tiny based emulator) submitted for this record.
 
 ### Measurement Methodology Used:
 I confirm that the dimensions were measured using the **axis-aligned bounding box method**. The measurements explicitly included the main printed circuit board (PCB), all soldered components, connectors, and solder joints, while excluding temporary external jumper wires used solely for I/O. 

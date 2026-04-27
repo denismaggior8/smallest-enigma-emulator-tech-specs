@@ -10,7 +10,7 @@
 
 This repository serves as the official entry point for the Technical Specifications and Record Attempt documentation for a Guinness World Records application. 
 
-The objective is to design, deploy, and verify the smallest possible self-contained Enigma M4 machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Kriegsmarine Enigma M4 machine and can successfully decrypt historical ciphertexts.
+The objective is to design, deploy, and verify the smallest possible self-contained **Enigma M4** machine emulator (hardware + software) that accurately replicates the cryptographic functions of a legitimate World War II Kriegsmarine Enigma M4 machine and can successfully decrypt historical ciphertexts.
 
 The Enigma machine was a famously complex electro-mechanical rotor cipher device used extensively by Nazi Germany during World War II to protect highly classified military communications. It has since become a global symbol of the birth of modern computing and cryptanalysis, popularized in recent years by the Oscar-winning film *The Imitation Game*. The film chronicled the monumental and top-secret efforts of Alan Turing and the brilliant team at Bletchley Park, whose success in breaking the seemingly unbreakable Enigma code proved to be a decisive turning point in the war.
 

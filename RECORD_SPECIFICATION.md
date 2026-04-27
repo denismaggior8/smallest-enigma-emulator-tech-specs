@@ -48,21 +48,21 @@ To prevent artificial volume reduction, the measurement axes (Length, Width, Hei
 
 ### 3.3 Inclusion Criteria
 
-Include:
-- PCB
-- Components
-- Connectors
-- Solder joints
+The measured volume MUST strictly account for the entirety of the functional emulator unit. This includes:
+- **Printed Circuit Board (PCB):** The main physical board(s) forming the structural substrate of the device.
+- **Surface & Through-Hole Components:** All onboard microcontrollers, resistors, capacitors, and any other mounted hardware required for operation.
+- **Connectors & Interfaces:** Any permanently attached sockets, pins, or ports used for external interfacing.
+- **Solder Joints & Assembly Tolerances:** The measurement must capture the absolute maximum physical extremities of the device, which naturally includes the added height/width from solder bumps, component misalignments, and manufacturing tolerances.
 
 ---
 
 ### 3.4 Exclusion Criteria
 
-Exclude:
-- External cables and adapters (if any)
-- External power supplies
-- Measurement fixtures
-- Temporary jumper wires used for I/O (if any)
+To ensure the measurement isolates the core computational unit from its temporary operational environment, the following items are explicitly excluded from the bounding box volume:
+- **External Cables and Adapters:** USB cables, serial adapters, or any external wiring used to connect the emulator to a host machine.
+- **External Power Supplies:** Batteries, power banks, or mains adapters that provide electrical power but perform no cryptographic logic.
+- **Measurement Fixtures:** Calipers, stands, or mounting putty used temporarily to hold the device during the measurement process.
+- **Temporary I/O Jumper Wires:** If bare wires or jumper cables are temporarily attached or soldered solely for the purpose of demonstrating I/O during the record attempt, they do not count towards the device's permanent physical footprint.
 
 ---
 

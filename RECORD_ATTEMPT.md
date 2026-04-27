@@ -9,7 +9,7 @@
 
 ## 2. Emulator Implementation Architecture
 
-The core of this attempt relies on the **[enigma-core](https://github.com/denismaggior8/enigma-core)** library, a standalone, embedded-ready Enigma machine simulator built specifically for extremely constrained microcontrollers. The implementation leverages the following architectural features to achieve computational autonomy:
+The core of this attempt relies on the **[enigma-core](https://github.com/denismaggior8/enigma-core)** library, a standalone, embedded-ready Enigma machine simulator built by the claimant specifically for extremely constrained microcontrollers. The implementation leverages the following architectural features to achieve computational autonomy:
 
 *   **AT Command Interface:** The device operates seamlessly as a hardware peripheral, accepting configuration settings and streaming ciphertexts via a classic, modem-style AT command interface over a USB serial connection.
 *   **MicroPython Foundation:** Written in pure Python, the firmware executes directly on the RP2040-Zero using the MicroPython runtime, allowing complex cryptographic algorithms to run efficiently on embedded hardware.

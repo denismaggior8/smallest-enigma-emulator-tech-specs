@@ -52,15 +52,18 @@ Alternatively, adjudicators can manually reproduce the behavior by communicating
 
 ```text
 # 1. Initialize M4 Model and B-Thin Reflector
+# According to the specs, available reflectors are: BT (B-Thin) and CT (C-Thin)
 AT+ENIGMA=M4
-AT+REFLECTOR=BT # It could be CT for C-Thin Reflector
+AT+REFLECTOR=BT
 
 # 2. Configure Rotors (Fast to Slow, including Greek static rotor)
+# According to the specs, available rotors for rotor 0 to 2 are: I, II, III, IV, V, VI, VII, VIII
+# According to the specs, available rotors for rotor 3 (Greek) are: B (Beta) or G (Gamma)
 # Format: AT+ROTOR=<idx>,<type>,<ring_setting>,<initial_pos>
-AT+ROTOR=0,VIII,20,2 # According to specs, available rotors are: I, II, III, IV, V, VI, VII, VIII
-AT+ROTOR=1,III,2,6 # According to the specs, available rotors are: I, II, III, IV, V, VI, VII, VIII
-AT+ROTOR=2,IV,0,12 # According to the specs, available rotors are: I, II, III, IV, V, VI, VII, VIII
-AT+ROTOR=3,G,0,21 # According to the specs, available Greek rotors are: B (Beta) or G (Gamma) 
+AT+ROTOR=0,VIII,20,2
+AT+ROTOR=1,III,2,6
+AT+ROTOR=2,IV,0,12
+AT+ROTOR=3,G,0,21
 
 # 3. Configure Plugboard connections (Steckerbrett)
 AT+PLUGBOARD=C,H

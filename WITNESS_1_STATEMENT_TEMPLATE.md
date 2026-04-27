@@ -33,7 +33,7 @@ I confirm that the dimensions were measured using the **axis-aligned bounding bo
 *   **Instrument Serial/Calibration No. (if applicable):** `[Insert Serial Number]`
 
 ### Recorded Dimensions:
-I attest that the following dimensions are accurate and were taken at the widest, longest, and highest points of the assembled emulator board:
+I attest that the following dimensions are accurate and were derived from the arithmetic mean of 3 independent measurements taken at the widest, longest, and highest points of the assembled emulator board:
 
 *   **Length (L):** `[Insert Length]` mm
 *   **Width (W):** `[Insert Width]` mm

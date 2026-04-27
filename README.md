@@ -15,7 +15,7 @@ To facilitate adjudication and public review, the documentation has been organiz
 ### 1. [Record Specification](./RECORD_SPECIFICATION.md)
 Contains the strict technical rules governing the emulator, the dimensional constraints, and the baseline specifications of the original historical Enigma M4.
 
-### 2. [Record Attempt & Evidence](./RECORD_ATTEMPT.md)
+### 2. [Record Attempt & Evidences](./RECORD_ATTEMPT.md)
 Contains the formal application details, the measurement and cryptographic verification methodologies, the independent witness declarations, and the comprehensive Evidence Inventory (videos, logs, photos).
 
 ---

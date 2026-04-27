@@ -41,7 +41,14 @@ This attempt utilizes the following reproducible **[Verification Kit](./tests)**
 
 *Note: While the Verification Kit utilizes/provides a well known M4 message for immediate proof, the emulator is strictly **not** limited to this specific example. It is a functionally complete replica capable of encrypting or decrypting any authentic M4 Enigma configuration.*
 
-## 6. Evidence Inventory
+## 6. Reproducibility
+
+To ensure complete transparency and allow adjudicators to independently verify this record claim, the entire system is designed to be fully reproducible. Any third party can independently replicate these exact results by following three simple steps:
+1. **Acquire Hardware:** Obtain a standard, unmodified [WaveShare RP2040-Tiny](https://www.waveshare.com/rp2040-tiny.htm?srsltid=AfmBOopdHzICTJyQRDJfgRg1Y4STzqKt4vT1tkt6pyTvpTrWu_gPU1E2) microcontroller board.
+2. **Flash Firmware:** Connect the board via USB and drag-and-drop the pre-compiled `enigma-core` `.uf2` firmware image (provided in the Evidence Inventory) directly onto the drive to initialize the bare-metal emulator.
+3. **Execute Verification:** Run the `verify_p1030700.sh` script against the attached serial port to deterministically reproduce the historical cryptographic decryption.
+
+## 7. Evidence Inventory
 To formally support the record claim, this repository contains the following indexed exhibits:
 
 *   **Exhibit A: Cover Letter & Application Summary** 

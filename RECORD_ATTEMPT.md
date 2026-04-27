@@ -37,7 +37,7 @@ In accordance with the validation procedures defined in the specifications, the 
 
 This attempt utilizes the following reproducible **[Verification Kit](./tests)** to demonstrate compliance:
 
-- [`verify_p1030700.sh`](./tests/verify_p1030700.sh) based on the famous U-534 M4 interception preserved by the [Hoerenberg Enigma M4 Project](https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700). This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via `enigma-core` AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.
+- [`verify_p1030700.sh`](./tests/verify_p1030700.sh) based on the famous U-534 M4 interception preserved by the [Hoerenberg Enigma M4 Project](https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700). This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.
 
 *Note: While the Verification Kit utilizes/provides a well known M4 message for immediate proof, the emulator is strictly **not** limited to this specific example. It is a functionally complete replica capable of encrypting or decrypting any authentic M4 Enigma configuration.*
 
@@ -45,7 +45,7 @@ This attempt utilizes the following reproducible **[Verification Kit](./tests)**
 
 To ensure complete transparency and allow adjudicators to independently verify this record claim, the entire system is designed to be fully reproducible. Any third party can independently replicate these exact results by following three simple steps:
 1. **Acquire Hardware:** Obtain a standard, unmodified [WaveShare RP2040-Tiny](https://www.waveshare.com/rp2040-tiny.htm?srsltid=AfmBOopdHzICTJyQRDJfgRg1Y4STzqKt4vT1tkt6pyTvpTrWu_gPU1E2) microcontroller board.
-2. **Flash Firmware:** Connect the board via USB and drag-and-drop the pre-compiled `enigma-core` `.uf2` firmware image (provided in the Evidence Inventory) directly onto the drive to initialize the bare-metal emulator.
+2. **Flash Firmware:** Connect the board via USB and drag-and-drop the pre-compiled `.uf2` firmware image (provided in the Evidence Inventory) directly onto the drive to initialize the bare-metal emulator.
 3. **Execute Verification:** Run the `verify_p1030700.sh` script against the attached serial port to deterministically reproduce the historical cryptographic decryption.
 
 ## 7. Evidence Inventory

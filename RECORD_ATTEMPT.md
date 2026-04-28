@@ -114,7 +114,7 @@ To formally support the record claim, this repository contains the following ind
     *   Signed declarations from the independent witnesses.
     *   `[Link to Witness Statements PDF]`
 *   **Exhibit F: Board Firmware & Enigma Library Source Code**
-    *   **Board Firmware**: [`enigma-core_firmware_v1.0.1_RPI_PICO.uf2`](https://github.com/denismaggior8/smallest-enigma-emulator-tech-specs/releases/latest/download/enigma-core_firmware_v1.0.1_RPI_PICO.uf2) (SHA256: `791bf4c142088071c10815574e90e70b8020713cc935afbc9a3e3f105b71db0d`)
+    *   **Board Firmware**: [`enigma-core_firmware_v1.0.2_RPI_PICO.uf2`](https://github.com/denismaggior8/smallest-enigma-emulator-tech-specs/releases/latest/download/enigma-core_firmware_v1.0.2_RPI_PICO.uf2) (SHA256: `5300f6c246d1e9febcd12cd02e0c8d13d8b40f31dd67fdb2e9dca1c4b9b98d0d`)
     *   **Enigma Library Source Code**: [enigma-python v3.1.2](https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2)
 
 ---

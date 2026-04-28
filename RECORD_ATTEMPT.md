@@ -81,10 +81,11 @@ AT+PLUGBOARD=Q,B
 
 # 4. Stream historical ciphertext to the device 
 # (Send characters individually followed by a newline; the device replies with the decrypted letter and OK for each character)
-b
 q
+b
 h
 e
+w
 ```
 
 ## 7. Evidence Inventory

@@ -110,6 +110,7 @@ The output must match exactly. Furthermore, to explicitly validate the **recipro
 
 ### 6.1 Test Vector Trust Chain
 To establish an unassailable trust chain for the test vectors, the validation procedure must adhere to the following:
+
 - **Source of Truth:** All ciphertexts and their corresponding key settings and plaintexts must be sourced from publicly recognized, peer-reviewed historical archives (e.g., the Hoerenberg Enigma M4 Project).
 - **Reference Implementation:** The correctness of the chosen test vectors must be independently verifiable against recognized, standard software Enigma simulators (such as Universal Enigma or those provided by the Crypto Museum) to prove the baseline is accurate.
 - **Reproducibility Method:** The validation process must be fully reproducible. The applicant must provide automated execution tools (e.g., shell scripts) that deterministically feed the configuration and ciphertext to the emulator, allowing adjudicators to easily replicate the exact test conditions and verify the output.

@@ -92,12 +92,20 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 
 In pursuit of a legitimate "emulator," the following constraints apply:
 
+### 5.1 Software Rules
+
 - **No Pre-computed Ciphertext Tables:** The emulator cannot use massive look-up tables containing pre-computed ciphertexts to bypass the algorithmic implementation of the Enigma machine. (Note: The use of data structures or lookup tables used exclusively to define the static internal wirings of the historical rotors and reflectors is permitted).
 - **Computationally Autonomous & Self-Contained:** All encryption and decryption operations MUST be executed entirely on the physical device itself using only its own internal processor and memory. Offloading computation to external servers or network calls is strictly prohibited. To clarify "self-contained operation":
     - *Power Source:* External power supplies or batteries are permitted (and are excluded from the volume measurement) provided they supply *only* power and contain no computational logic or data side-channels.
     - *I/O Expectations:* External I/O interfaces (such as a USB serial connection) are permitted for the sole purpose of transmitting key configurations, streaming input ciphertexts, and reading the output plaintexts. The external client connected to the I/O interface MUST NOT perform any part of the Enigma cryptographic algorithm. It is explicitly permitted for a single USB cable to simultaneously supply power and serve as the I/O interface.
     - *Initialization Conditions:* The device must be capable of receiving a full state reset and processing a new M4 configuration from a cold boot, without relying on persistent external state or configuration files from a host machine.
 - **No Hardcoded Outputs:** The system must deterministically process the input based solely on the provided key settings, without hardcoded historical solutions.
+
+### 5.2 Hardware Rules
+
+- **No Post-Manufacturing Size Reduction:** Post-manufacturing physical modification intended to reduce the measured footprint (e.g., cutting, sanding, depaneling) is not permitted.
+- **No Removable Components to Cheat Size:** All components required for operation must be physically present within the measured footprint.
+- **No Externalized Functionality:** No functional dependency regarding the cryptographic encryption or decryption logic may exist outside the measured system boundary (standard I/O interfaces and power supplies are explicitly permitted as detailed in Section 5.1).
 
 ---
 

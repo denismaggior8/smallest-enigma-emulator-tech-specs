@@ -40,4 +40,6 @@ jobs:
           cp WITNESS_2_STATEMENT_TEMPLATE.md docs/
           cp -r img docs/
           cp -r tests docs/
+          cp -r logs docs/ || true
+          cp -r recs docs/ || true
       - run: mkdocs gh-deploy --force

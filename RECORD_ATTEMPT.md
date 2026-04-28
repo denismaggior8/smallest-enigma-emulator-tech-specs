@@ -29,6 +29,7 @@ To satisfy the strict requirements of the "smallest volume" claim, the physical 
 
 ## 4. Independent Witnesses
 GWR requires independent specialist witnesses to verify both the physical measurements and the cryptographic accuracy of the device. The signed statements from the following experts are included in the Evidence Inventory:
+
 *   **Witness 1:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Professor of Computer Science / Cryptography Expert]`
 *   **Witness 2:** `[Insert Name]`, `[Insert Title/Expertise, e.g., Senior Electrical Engineer]`
 
@@ -44,6 +45,7 @@ This attempt utilizes the following reproducible **[Verification Kit](./tests)**
 ## 6. Reproducibility
 
 To ensure complete transparency and allow adjudicators to independently verify this record claim, the entire system is designed to be fully reproducible. Any third party can independently replicate these exact results by following three simple steps:
+
 1. **Acquire Hardware:** Obtain a standard, unmodified [WaveShare RP2040-Tiny](https://www.waveshare.com/rp2040-tiny.htm?srsltid=AfmBOopdHzICTJyQRDJfgRg1Y4STzqKt4vT1tkt6pyTvpTrWu_gPU1E2) microcontroller board.
 2. **Flash Firmware:** Connect the board via USB and drag-and-drop the pre-compiled `.uf2` firmware image (provided in the Evidence Inventory) directly onto the drive to initialize the bare-metal emulator.
 3. **Execute Verification:** Run the `verify_p1030700.sh` script against the attached serial port to deterministically reproduce the historical cryptographic decryption.

@@ -42,4 +42,5 @@ jobs:
           cp -r tests docs/
           cp -r logs docs/ || true
           cp -r recs docs/ || true
+          cp CNAME docs/ || true
       - run: mkdocs gh-deploy --force

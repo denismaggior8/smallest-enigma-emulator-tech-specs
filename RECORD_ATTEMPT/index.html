@@ -1,0 +1,968 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Technical Specifications and Record Attempt for the Smallest Enigma M4 Emulator">
+      
+      
+        <meta name="author" content="Denis Maggiorotto">
+      
+      
+      
+        <link rel="prev" href="../RECORD_SPECIFICATION/">
+      
+      
+        <link rel="next" href="../WITNESS_1_STATEMENT_TEMPLATE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Record Attempt - Smallest Enigma Emulator Tech Specs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#record-attempt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Smallest Enigma Emulator Tech Specs" class="md-header__button md-logo" aria-label="Smallest Enigma Emulator Tech Specs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Smallest Enigma Emulator Tech Specs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Record Attempt
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../RECORD_SPECIFICATION/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Record Specification
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Record Attempt
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../WITNESS_1_STATEMENT_TEMPLATE/" class="md-tabs__link">
+          
+  
+  
+  Witness Statements
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Smallest Enigma Emulator Tech Specs" class="md-nav__button md-logo" aria-label="Smallest Enigma Emulator Tech Specs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Smallest Enigma Emulator Tech Specs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RECORD_SPECIFICATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Record Specification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Record Attempt
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Record Attempt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-guinness-world-records-application-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Guinness World Records Application Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-emulator-implementation-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Emulator Implementation Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-measurement-results-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Measurement Results &amp; Methodology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-independent-witnesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Independent Witnesses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cryptographic-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cryptographic Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-evidence-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Evidence Inventory
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Witness Statements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Witness Statements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WITNESS_1_STATEMENT_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Witness 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WITNESS_2_STATEMENT_TEMPLATE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Witness 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-guinness-world-records-application-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Guinness World Records Application Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-emulator-implementation-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Emulator Implementation Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-measurement-results-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Measurement Results &amp; Methodology
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-independent-witnesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Independent Witnesses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cryptographic-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cryptographic Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-evidence-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Evidence Inventory
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="record-attempt">Record Attempt<a class="headerlink" href="#record-attempt" title="Permanent link">&para;</a></h1>
+<h2 id="1-guinness-world-records-application-details">1. Guinness World Records Application Details<a class="headerlink" href="#1-guinness-world-records-application-details" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Application Reference Number:</strong> <code>[Insert GWR Application ID]</code></li>
+<li><strong>Applicant Name:</strong> <code>Denis Maggiorotto</code></li>
+<li><strong>Date of Attempt:</strong> <code>[Insert Date]</code></li>
+<li><strong>Location of Attempt:</strong> <code>Chieri (Turin), Italy</code></li>
+<li><strong>Hardware Platform:</strong> <a href="https://www.waveshare.com/rp2040-tiny.htm?srsltid=AfmBOopdHzICTJyQRDJfgRg1Y4STzqKt4vT1tkt6pyTvpTrWu_gPU1E2">WaveShare RP2040-Tiny</a></li>
+</ul>
+<h2 id="2-emulator-implementation-architecture">2. Emulator Implementation Architecture<a class="headerlink" href="#2-emulator-implementation-architecture" title="Permanent link">&para;</a></h2>
+<p>The core of this attempt relies exclusively on <strong>RP2040-based microcontroller boards</strong>, the <strong><a href="https://github.com/denismaggior8/enigma-python">enigma-python</a></strong> cryptographic library, and the <strong>MicroPython</strong> runtime. The implementation leverages the following architectural features to achieve computational autonomy:</p>
+<ul>
+<li><strong>AT Command Interface:</strong> The device operates seamlessly as a hardware peripheral, accepting configuration settings and streaming ciphertexts via a classic, modem-style AT command interface over a USB serial connection.</li>
+<li><strong>MicroPython Foundation:</strong> Written in pure Python, the firmware executes directly on RP2040-based microcontrollers using the MicroPython runtime, allowing complex cryptographic algorithms to run efficiently on embedded hardware.</li>
+<li><strong>Handler-Based Dispatching:</strong> Commands are implemented as isolated, runtime-loaded modules, ensuring a clean separation between I/O parsing and the actual cryptographic processing engine.</li>
+<li><strong>Centralized State &amp; Memory Management:</strong> The emulator utilizes a strict Device State Singleton to maintain rotor positions securely in memory. To survive the severe RAM limitations of the hardware, it triggers automatic memory cleanup (garbage collection hooks) after state changes, making it capable of processing the lengthy, historically authentic ciphertexts required for validation.</li>
+</ul>
+<h2 id="3-measurement-results-methodology">3. Measurement Results &amp; Methodology<a class="headerlink" href="#3-measurement-results-methodology" title="Permanent link">&para;</a></h2>
+<p>To satisfy the strict requirements of the "smallest volume" claim, the physical hardware footprint of the assembled emulator was meticulously measured and documented according to the axis-aligned bounding box method.</p>
+<ul>
+<li><strong>Vendor Declared Dimensions:</strong> 23.5 mm (L) × 18.0 mm (W) × 2.1 mm (H) (<a href="../img/RP2040-Tiny-Kit-details-7.jpg">see vendor schematic</a>)</li>
+<li><strong>Vendor Declared Volume:</strong> 888.3 mm³</li>
+<li><strong>Measured Dimensions (Mean of 3 measurements):</strong> <code>[Insert Length]</code> mm (L) × <code>[Insert Width]</code> mm (W) × <code>[Insert Height]</code> mm (H)</li>
+<li><strong>Calculated Measured Volume:</strong> <code>[Insert Volume]</code> mm³</li>
+<li><strong>Measurement Instrument:</strong> Calibrated Digital Calipers <code>Preciva 150mm Digital Caliper Model LF326 P/N CS00270</code></li>
+<li><strong>Methodology:</strong> The dimensions were taken at the widest, longest, and highest points of the assembled RP2040-Tiny board, explicitly including the PCB, components, connectors, and solder joints, while excluding temporary I/O jumper wires. Each axis was measured 3 times, and the arithmetic mean was recorded as the final dimension.</li>
+<li><strong>Photographic Evidence:</strong> <code>[Insert link/reference to high-resolution photos showing the calipers reading the exact L, W, and H dimensions of the board]</code></li>
+</ul>
+<h2 id="4-independent-witnesses">4. Independent Witnesses<a class="headerlink" href="#4-independent-witnesses" title="Permanent link">&para;</a></h2>
+<p>GWR requires independent specialist witnesses to verify both the physical measurements and the cryptographic accuracy of the device. The signed statements from the following experts are included in the Evidence Inventory:</p>
+<ul>
+<li><strong>Witness 1:</strong> <code>[Insert Name]</code>, <code>[Insert Title/Expertise, e.g., Professor of Computer Science / Cryptography Expert]</code></li>
+<li><strong>Witness 2:</strong> <code>[Insert Name]</code>, <code>[Insert Title/Expertise, e.g., Senior Electrical Engineer]</code></li>
+</ul>
+<h2 id="5-cryptographic-validation">5. Cryptographic Validation<a class="headerlink" href="#5-cryptographic-validation" title="Permanent link">&para;</a></h2>
+<p>In accordance with the validation procedures defined in the specifications, the emulator's cryptographic accuracy and reciprocity were rigorously tested against authentic historical interceptions.</p>
+<p>This attempt utilizes the following reproducible <strong><a href="./tests">Verification Kit</a></strong> to demonstrate compliance:</p>
+<ul>
+<li><a href="../tests/verify_p1030700.sh"><code>verify_p1030700.sh</code></a> based on the famous U-534 M4 interception preserved by the <a href="https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&amp;page=P1030700">Hoerenberg Enigma M4 Project</a>. This shell script automatically dispatches the exact authentic historical ring settings, rotor topology, and plugboard connections directly into the emulator over serial via AT commands, before streaming the 1940s ciphertext to visually demonstrate the translation into the original German plaintext.</li>
+</ul>
+<p><em>Note: While the Verification Kit utilizes/provides a well known M4 message for immediate proof, the emulator is strictly </em><em>not</em><em> limited to this specific example. It is a functionally complete replica capable of encrypting or decrypting any authentic M4 Enigma configuration.</em></p>
+<h2 id="6-reproducibility">6. Reproducibility<a class="headerlink" href="#6-reproducibility" title="Permanent link">&para;</a></h2>
+<p>To ensure complete transparency and allow adjudicators to independently verify this record claim, the entire system is designed to be fully reproducible. Any third party can independently replicate these exact results by following three simple steps:</p>
+<ol>
+<li><strong>Acquire Hardware:</strong> Obtain a standard, unmodified <a href="https://www.waveshare.com/rp2040-tiny.htm?srsltid=AfmBOopdHzICTJyQRDJfgRg1Y4STzqKt4vT1tkt6pyTvpTrWu_gPU1E2">WaveShare RP2040-Tiny</a> microcontroller board.</li>
+<li><strong>Flash Firmware:</strong> Connect the board via USB and drag-and-drop the pre-compiled <code>.uf2</code> firmware image (provided in the Evidence Inventory) directly onto the drive to initialize the bare-metal emulator.</li>
+<li><strong>Execute Verification:</strong> Run the <code>verify_p1030700.sh</code> script against the attached serial port to deterministically reproduce the historical cryptographic decryption.</li>
+</ol>
+<p>Alternatively, adjudicators can manually reproduce the behavior by communicating with the board over any standard serial terminal (e.g., PuTTY, minicom, or screen). Below is the exact sequence of AT commands needed to initialize the historically accurate M4 configuration and decipher the first few characters of the P1030700 message:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># 1. Initialize M4 Model and B-Thin Reflector
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># According to the specs, available reflectors are: BT (B-Thin) and CT (C-Thin)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>AT+ENIGMA=M4
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>AT+REFLECTOR=BT
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a># 2. Configure Rotors (Fast to Slow, including Greek static rotor)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a># According to the specs, available rotors for rotor 0 to 2 are: I, II, III, IV, V, VI, VII, VIII
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a># According to the specs, available rotors for rotor 3 (Greek) are: B (Beta) or G (Gamma)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a># Format: AT+ROTOR=&lt;idx&gt;,&lt;type&gt;,&lt;ring_setting&gt;,&lt;initial_pos&gt;
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>AT+ROTOR=0,VIII,20,2
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>AT+ROTOR=1,III,2,6
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>AT+ROTOR=2,IV,0,12
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>AT+ROTOR=3,G,0,21
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a># 3. Configure Plugboard connections (Steckerbrett)
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>AT+PLUGBOARD=C,H
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>AT+PLUGBOARD=E,J
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>AT+PLUGBOARD=N,V
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>AT+PLUGBOARD=O,U
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>AT+PLUGBOARD=T,Y
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>AT+PLUGBOARD=L,G
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>AT+PLUGBOARD=S,Z
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>AT+PLUGBOARD=P,K
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>AT+PLUGBOARD=D,I
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>AT+PLUGBOARD=Q,B 
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a># 4. Stream historical ciphertext to the device 
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a># (Send characters individually followed by a newline; the device replies with the decrypted letter and OK for each character)
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>q
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>b
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>h
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>e
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>w
+</span></code></pre></div>
+<h2 id="7-evidence-inventory">7. Evidence Inventory<a class="headerlink" href="#7-evidence-inventory" title="Permanent link">&para;</a></h2>
+<p>To formally support the record claim, this repository contains the following indexed exhibits:</p>
+<ul>
+<li><strong>Exhibit A: Cover Letter &amp; Application Summary</strong> <ul>
+<li><code>[Link to Cover Letter PDF]</code></li>
+</ul>
+</li>
+<li><strong>Exhibit B: Unbroken Video Evidence</strong> <ul>
+<li><em>Requirement:</em> A continuous, unedited physical camera recording showing the hardware board, the measurement process, and the real-time decryption output on the monitor simultaneously.</li>
+<li><code>[Link to Raw Video File]</code></li>
+</ul>
+</li>
+<li><strong>Exhibit C: Photographic Evidence</strong><ul>
+<li>High-resolution images of the board and the measurement process.</li>
+<li><code>[Link to Photo Directory]</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Exhibit D: System Logs &amp; Terminal Casts</strong></p>
+<ul>
+<li>The raw, unedited standard output logs (<code>.txt</code> files) and interactive terminal recordings (<code>.cast</code> files) documenting the exact AT commands, decryption streams, and reverse-encryption processes.</li>
+</ul>
+<p><strong>Verification Kits Summary:</strong>
+In the following table, we summarize the Verification Kits provided in this repository, detailing their execution commands, completion status, output logs, and native video recordings:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verification Script</th>
+<th style="text-align: left;">Verification Command</th>
+<th style="text-align: center;">Execution Status</th>
+<th style="text-align: left;">Output Log</th>
+<th style="text-align: left;">Terminal Recording</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="../tests/verify_p1030700.sh"><code>verify_p1030700.sh</code></a></td>
+<td style="text-align: left;"><code>asciinema rec -q -c "./tests/verify_p1030700.sh" recs/rec_p1030700.cast --overwrite &amp;&amp; asciinema convert -f raw recs/rec_p1030700.cast - &gt; logs/verify_p1030700.txt</code></td>
+<td style="text-align: center;">✅ VERIFIED</td>
+<td style="text-align: left;"><a href="../logs/verify_p1030700.txt"><code>verify_p1030700.txt</code></a></td>
+<td style="text-align: left;"><a href="../recs/rec_p1030700.cast"><code>rec_p1030700.cast</code></a></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: The </em><em>Video Demonstrations</em><em> have been recorded using <a href="https://asciinema.org/">asciinema</a> to faithfully capture standard output directly from the hardware execution. You can seamlessly replay any <code>.cast</code> file linked above by running <code>asciinema play &lt;file.cast&gt;</code> in your terminal (e.g., <code>asciinema play recs/rec_p1030700.cast</code>).</em></p>
+</li>
+<li>
+<p><strong>Exhibit E: Witness Statements</strong></p>
+<ul>
+<li>Signed declarations from the independent witnesses.</li>
+<li><code>[Link to Witness Statements PDF]</code></li>
+</ul>
+</li>
+<li><strong>Exhibit F: Board Firmware &amp; Enigma Library Source Code</strong><ul>
+<li><strong>Board Firmware</strong>: <a href="https://github.com/denismaggior8/smallest-enigma-emulator-tech-specs/releases/latest/download/enigma-core_firmware_v1.0.2_RPI_PICO.uf2"><code>enigma-core_firmware_v1.0.2_RPI_PICO.uf2</code></a> (SHA256: <code>5300f6c246d1e9febcd12cd02e0c8d13d8b40f31dd67fdb2e9dca1c4b9b98d0d</code>)</li>
+<li><strong>Enigma Library Source Code</strong>: <a href="https://github.com/denismaggior8/enigma-python/releases/tag/v3.1.2">enigma-python v3.1.2</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><em>Maintained for Guinness World Record Adjudication.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -75,6 +75,7 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 - **Rotor Settings:** Full support for *Grundstellung* (initial position) and *Ringstellung* (ring settings) across all inserted rotors.
 - **Plugboard (*Steckerbrett*):** Must allow for up to 13 arbitrary standard alphabet (A-Z) letter pairings.
 - **Correct Rotor Stepping:** Accurately mirroring the mechanical stepping mechanism, including the infamous historical "double-stepping" anomalies of the middle rotor.
+- **Optional Add-ons:** The emulation of highly specialized or experimental Enigma accessories—such as the *Enigma-Uhr* (a plugboard expansion switch) or the *UKW-D* (a field-rewirable reflector known as "Uncle D")—is not strictly required for a valid claim, although their inclusion remains permitted.
 - **User Interface Independence:** The physical user interface components of the historical machine (such as the keyboard and lampboard) have been intentionally omitted from this specification. The emulator is permitted to implement any user interface (e.g., a serial connection) provided the core cryptographic algorithm remains intact.
 
 *For historical and technical reference on the original Naval M4 Enigma, please consult:*

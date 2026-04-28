@@ -42,8 +42,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Record Attempt: RECORD_ATTEMPT.md
   - Record Specification: RECORD_SPECIFICATION.md
+  - Record Attempt: RECORD_ATTEMPT.md
   - Witness Statements:
       - Witness 1: WITNESS_1_STATEMENT_TEMPLATE.md
       - Witness 2: WITNESS_2_STATEMENT_TEMPLATE.md

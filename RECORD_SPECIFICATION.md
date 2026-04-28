@@ -19,6 +19,7 @@ To ensure strict adherence to the record title, the record is defined as:
 
 ### 2.1 Historical Baseline Comparison
 To provide a physical baseline for the miniaturization claim, the original electromechanical Enigma M4 (introduced in 1942 for the German U-boat fleet) had the following characteristics:
+
 *   **Physical Dimensions:** ~ 340 mm (width) × 280 mm (depth) × 150 mm (height)
 *   **Weight:** ~ 12 kg (26 lbs)
 *   **Construction:** Heavy wooden casing housing a die-cast metal chassis.
@@ -49,6 +50,7 @@ To prevent artificial volume reduction, the measurement axes (Length, Width, Hei
 ### 3.3 Inclusion Criteria
 
 The measured volume MUST strictly account for the entirety of the functional emulator unit. This includes:
+
 - **Printed Circuit Board (PCB):** The main physical board(s) forming the structural substrate of the device.
 - **Surface & Through-Hole Components:** All onboard microcontrollers, resistors, capacitors, and any other mounted hardware required for operation.
 - **Connectors & Interfaces:** Any permanently attached sockets, pins, or ports used for external interfacing.
@@ -59,6 +61,7 @@ The measured volume MUST strictly account for the entirety of the functional emu
 ### 3.4 Exclusion Criteria
 
 To ensure the measurement isolates the core computational unit from its temporary operational environment, the following items are explicitly excluded from the bounding box volume:
+
 - **External Cables and Adapters:** USB cables, serial adapters, or any external wiring used to connect the emulator to a host machine.
 - **External Power Supplies:** Batteries, power banks, or mains adapters that provide electrical power but perform no cryptographic logic.
 - **Measurement Fixtures:** Calipers, stands, or mounting putty used temporarily to hold the device during the measurement process.
@@ -102,6 +105,7 @@ In pursuit of a legitimate "emulator," the following constraints apply:
 To satisfy adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages").
 
 Each test vector must define:
+
 - **Configuration:** The correct historical key settings (Rotors, Ring settings, Plugboard connections, initial positions).
 - **Input:** The Original 1945-era Ciphertext (e.g., the U-534 interceptions).
 - **Expected Output:** The documented historical German plaintext.

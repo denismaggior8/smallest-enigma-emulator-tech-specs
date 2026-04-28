@@ -82,6 +82,7 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 - **User Interface Independence:** The physical user interface components of the historical machine (such as the keyboard and lampboard) have been intentionally omitted from this specification. The emulator is permitted to implement any user interface (e.g., a serial connection) provided the core cryptographic algorithm remains intact.
 
 *For historical and technical reference on the original Naval M4 Enigma, please consult:*
+
 *   [Wikipedia: Enigma-M4](https://en.wikipedia.org/wiki/Enigma-M4)
 *   [Crypto Museum: Enigma M4](https://www.cryptomuseum.com/crypto/enigma/m4/)
 

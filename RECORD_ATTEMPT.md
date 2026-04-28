@@ -106,7 +106,7 @@ To formally support the record claim, this repository contains the following ind
 
     | Verification Script | Verification Command | Execution Status | Output Log | Terminal Recording |
     | :--- | :--- | :---: | :--- | :--- |
-    | [`verify_p1030700.sh`](./tests/verify_p1030700.sh) | `asciinema rec -q -c "./tests/verify_p1030700.sh" recs/rec_p1030700.cast --overwrite \| tee logs/verify_p1030700.log` | ✅ VERIFIED | [`verify_p1030700.log`](./logs/verify_p1030700.log) | [`rec_p1030700.cast`](./recs/rec_p1030700.cast) |
+    | [`verify_p1030700.sh`](./tests/verify_p1030700.sh) | `asciinema rec -q -c "./tests/verify_p1030700.sh" recs/rec_p1030700.cast --overwrite && asciinema convert -f raw recs/rec_p1030700.cast - > logs/verify_p1030700.log` | ✅ VERIFIED | [`verify_p1030700.log`](./logs/verify_p1030700.log) | [`rec_p1030700.cast`](./recs/rec_p1030700.cast) |
 
     *Note: The **Video Demonstrations** have been recorded using [asciinema](https://asciinema.org/) to faithfully capture standard output directly from the hardware execution. You can seamlessly replay any `.cast` file linked above by running `asciinema play <file.cast>` in your terminal (e.g., `asciinema play recs/rec_p1030700.cast`).*
 

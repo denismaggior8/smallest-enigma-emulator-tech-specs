@@ -103,6 +103,7 @@ In pursuit of a legitimate "emulator," the following constraints apply:
 
 ### 5.2 Hardware Rules
 
+- **Commercially Available Hardware:** The emulator must be implemented on standard hardware that is publicly available for purchase by the general consumer from standard retail or electronics distribution channels. The use of custom-fabricated silicon (e.g., custom ASICs), proprietary micro-PCBs manufactured exclusively for the record attempt, or restricted enterprise hardware is strictly prohibited. This ensures the record remains reproducible and grounded in accessible consumer technology.
 - **No Post-Manufacturing Size Reduction:** Post-manufacturing physical modification intended to reduce the measured footprint (e.g., cutting, sanding, depaneling) is not permitted.
 - **No Removable Components to Cheat Size:** All components required for operation must be physically present within the measured footprint.
 - **No Externalized Functionality:** No functional dependency regarding the cryptographic encryption or decryption logic may exist outside the measured system boundary (standard I/O interfaces and power supplies are explicitly permitted as detailed in Section 5.1).

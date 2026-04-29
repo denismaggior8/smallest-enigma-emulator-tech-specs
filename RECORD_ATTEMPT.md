@@ -19,11 +19,13 @@ The core of this attempt relies exclusively on **RP2040-based microcontroller bo
 ## 3. Measurement Results & Methodology
 To satisfy the strict requirements of the "smallest volume" claim, the physical hardware footprint of the assembled emulator was meticulously measured and documented according to the axis-aligned bounding box method.
 
-*   **Vendor Declared Dimensions:** 23.5 mm (L) × 18.0 mm (W) × 2.1 mm (H) ([see vendor schematic](./img/RP2040-Tiny-Kit-details-7.jpg))
+*   **Vendor Declared Dimensions:** 23.5 mm (L) × 18.0 mm (W) × 2.1 mm (H)
+    
+    ![Vendor schematic](./img/RP2040-Tiny-Kit-details-7.jpg)
 *   **Vendor Declared Volume:** 888.3 mm³
 *   **Measured Dimensions (Mean of 3 measurements):** `[Insert Length]` mm (L) × `[Insert Width]` mm (W) × `[Insert Height]` mm (H)
 *   **Calculated Measured Volume:** `[Insert Volume]` mm³
-*   **Measurement Instrument:** Calibrated Digital Calipers `Preciva 150mm Model LF326 P/N CS00270 high-precision measurement resolution of 0.01mm (0.0005in).`
+*   **Measurement Instrument:** Calibrated Digital Caliper `Preciva 150mm Model LF326 P/N CS00270` with high-precision measurement resolution of `0.01mm (0.0005in).`
 *   **Methodology:** The dimensions were taken at the widest, longest, and highest points of the assembled RP2040-Tiny board, explicitly including the PCB, components, connectors, and solder joints, while excluding temporary I/O jumper wires. Each axis was measured 3 times, and the arithmetic mean was recorded as the final dimension.
 *   **Photographic Evidence:** `[Insert link/reference to high-resolution photos showing the calipers reading the exact L, W, and H dimensions of the board]`
 

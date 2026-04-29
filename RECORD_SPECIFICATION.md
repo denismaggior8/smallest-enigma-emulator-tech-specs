@@ -7,7 +7,7 @@
 
 This document defines the strict technical, measurement, and validation requirements for the Guinness World Records title:
 
-**"Smallest functional Enigma M4 machine emulator implemented on commercially available hardware"**
+**"Smallest fully functional Enigma M4 machine emulator implemented on commercially available hardware"**
 
 ---
 

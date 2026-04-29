@@ -1,6 +1,6 @@
 # Smallest Enigma Emulator: Guinness World Record Attempt
 
-**Record Title:** "Smallest functional Enigma M4 machine emulator implemented on commercially available hardware"
+**Record Title:** "Smallest fully functional Enigma M4 machine emulator implemented on commercially available hardware"
 
 <p align="center">
   <img src="./img/cover.jpg" alt="Miniaturising History: The World's Smallest Enigma M4 Emulator">
@@ -10,7 +10,7 @@
 
 This repository serves as the official entry point for the Technical Specifications and Record Attempt documentation for a Guinness World Records application. 
 
-The objective is to design, deploy, and verify the smallest possible self-contained **Enigma M4** emulator using strictly commercially available hardware. The device must accurately replicate the complete cryptographic behavior of a World War II Kriegsmarine Enigma M4 machine and successfully decrypt authentic historical ciphertexts.
+The objective is to design, deploy, and verify the smallest possible,  self-contained, fully functional **Enigma M4** emulator using strictly commercially available hardware. The device must accurately replicate the complete cryptographic behavior of a World War II Kriegsmarine Enigma M4 machine and successfully decrypt authentic historical ciphertexts.
 
 The Enigma machine was a famously complex electro-mechanical rotor cipher device used extensively by Nazi Germany during World War II to protect highly classified military communications. It has since become a global symbol of the birth of modern computing and cryptanalysis, popularized in recent years by the Oscar-winning film *The Imitation Game*. The film chronicled the monumental and top-secret efforts of Alan Turing and the brilliant team at Bletchley Park, whose success in breaking the seemingly unbreakable Enigma code proved to be a decisive turning point in the war. 
 

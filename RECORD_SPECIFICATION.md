@@ -7,7 +7,7 @@
 
 This document defines the strict technical, measurement, and validation requirements for the Guinness World Records title:
 
-**"The smallest volume (mm³) of a self-contained hardware device capable of executing a fully functional M4 Enigma cipher algorithm."**
+**"Smallest functional Enigma M4 machine emulator implemented on commercially available hardware"**
 
 ---
 
@@ -15,7 +15,7 @@ This document defines the strict technical, measurement, and validation requirem
 
 To ensure strict adherence to the record title, the record is defined as:
 
-> The smallest volume (mm³) of a self-contained hardware device capable of executing a fully functional Naval M4 Enigma cipher algorithm, as measured using the axis-aligned bounding box method.
+> The smallest volume (mm³) of a self-contained, commercially available hardware device capable of executing a fully functional Naval M4 Enigma cipher algorithm, as measured using the axis-aligned bounding box method.
 
 ### 2.1 Historical Baseline Comparison
 To provide a physical baseline for the miniaturization claim, the original electromechanical Enigma M4 (introduced in 1942 for the German U-boat fleet) had the following characteristics:

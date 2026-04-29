@@ -114,6 +114,8 @@ In pursuit of a legitimate "emulator," the following constraints apply:
 
 To satisfy adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages").
 
+While the claimant is permitted to provide predefined test vectors to demonstrate baseline functionality, the emulator **MUST** be capable of successfully processing randomly selected, historically authenticated Enigma M4 messages chosen independently by the adjudicator or specialist witnesses. This prevents "cherry-picking" or hardcoding solutions for specific messages and ensures the cryptographic engine is fully generalized.
+
 Each test vector must define:
 
 - **Configuration:** The correct historical key settings (Rotors, Ring settings, Plugboard connections, initial positions).

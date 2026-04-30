@@ -22,6 +22,7 @@ To satisfy the strict requirements of the "smallest volume" claim, the physical 
 *   **Vendor Declared Dimensions:** 23.5 mm (L) × 18.0 mm (W) × 2.1 mm (H)
     
     ![Vendor schematic](./img/RP2040-Tiny-Kit-details-7.jpg)
+    
 *   **Vendor Declared Volume:** 888.3 mm³
 *   **Measured Dimensions (Mean of 3 measurements):** `[Insert Length]` mm (L) × `[Insert Width]` mm (W) × `[Insert Height]` mm (H)
 *   **Calculated Measured Volume:** `[Insert Volume]` mm³

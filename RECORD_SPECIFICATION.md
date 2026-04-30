@@ -33,6 +33,7 @@ To provide a physical baseline for the miniaturization claim, the original elect
 V = L × W × H
 
 Where:
+
 - L = length (mm)  
 - W = width (mm)  
 - H = height (mm)

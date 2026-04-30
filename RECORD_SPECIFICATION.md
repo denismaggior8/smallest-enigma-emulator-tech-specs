@@ -89,7 +89,7 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 *   [Wikipedia: Enigma-M4](https://en.wikipedia.org/wiki/Enigma-M4)
 *   [Crypto Museum: Enigma M4](https://www.cryptomuseum.com/crypto/enigma/m4/)
 
-*Note: Aside from the Test Vector Trust Chain defined in Section 6.1, the definitive software reference implementation used to compare and validate the accuracy of any proposed M4 emulator is the [Universal Enigma](https://people.physik.hu-berlin.de/~palloks/js/enigma/enigma-u_v20_en.html) by Daniel Palloks.*
+*Note: Aside from the Test Vector Trust Chain defined in Section 6.1, the definitive software reference implementation used to compare and validate the accuracy of any proposed M4 emulator is the [Universal Enigma](https://people.physik.hu-berlin.de/~palloks/js/enigma/enigma-u_v20_en.html) by Daniel Palloks. This specific implementation was selected due to the extreme scarcity of functional physical Naval M4 machines available for direct hardware comparison, as well as the current lack of an official M4 software emulator endorsed by [Bletchley Park](https://bletchleypark.org.uk/), [The National Museum of Computing](https://www.tnmoc.org/), or other recognized authorities in Enigma preservation.*
 
 ---
 

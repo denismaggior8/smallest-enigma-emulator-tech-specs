@@ -56,6 +56,7 @@ The measured volume MUST strictly account for the entirety of the functional emu
 - **Surface & Through-Hole Components:** All onboard microcontrollers, resistors, capacitors, and any other mounted hardware required for operation.
 - **Connectors & Interfaces:** Any permanently attached sockets, pins, or ports used for external interfacing.
 - **Solder Joints & Assembly Tolerances:** The measurement must capture the absolute maximum physical extremities of the device, which naturally includes the added height/width from solder bumps, component misalignments, and manufacturing tolerances.
+- **Enclosures & Cases (Optional):** If the claimant chooses to house the hardware inside a permanent protective case or custom enclosure, the measurement MUST encompass the absolute exterior dimensions of that case. While this inherently enlarges the volume of the attempt, a fully enclosed device is considered a single functional unit.
 
 ---
 

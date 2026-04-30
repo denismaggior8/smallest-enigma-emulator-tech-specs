@@ -66,6 +66,7 @@ To ensure the measurement isolates the core computational unit from its temporar
 - **External Cables and Adapters:** USB cables, serial adapters, or any external wiring used to connect the emulator to a host machine.
 - **External Power Supplies:** Batteries, power banks, or mains adapters that provide electrical power but perform no cryptographic logic.
 - **Measurement Fixtures:** Calipers, stands, or mounting putty used temporarily to hold the device during the measurement process.
+- **Mounting Sockets:** Any non-computational socket, breadboard, bracket, or cradle used strictly to mount the board, provide physical stability, or facilitate temporary connections.
 - **Temporary I/O Jumper Wires:** If bare wires or jumper cables are temporarily attached or soldered solely for the purpose of demonstrating I/O during the record attempt, they do not count towards the device's permanent physical footprint.
 
 ---

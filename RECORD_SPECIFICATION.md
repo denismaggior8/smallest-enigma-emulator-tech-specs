@@ -89,6 +89,8 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 *   [Wikipedia: Enigma-M4](https://en.wikipedia.org/wiki/Enigma-M4)
 *   [Crypto Museum: Enigma M4](https://www.cryptomuseum.com/crypto/enigma/m4/)
 
+*Note: Aside from the Test Vector Trust Chain defined in Section 6.1, the definitive software reference implementation used to compare and validate the accuracy of any proposed M4 emulator is the [Universal Enigma](https://people.physik.hu-berlin.de/~palloks/js/enigma/enigma-u_v20_en.html) by Daniel Palloks.*
+
 ---
 
 ## 5. Anti-Cheating Requirements

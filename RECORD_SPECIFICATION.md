@@ -30,13 +30,13 @@ To provide a physical baseline for the miniaturization claim, the original elect
 
 ### 3.1 Measurement Quantity
 
-V = L × W × H
+Volume (mm³) = L (mm) × W (mm) × H (mm)
 
 Where:
 
-- L = length (mm)  
-- W = width (mm)  
-- H = height (mm)
+- L = Length
+- W = Width
+- H = Height
 
 ---
 

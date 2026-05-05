@@ -32,5 +32,10 @@ Contains the strict technical rules governing the emulator, the dimensional cons
 ### 2. Record Attempt & Evidences (TBD)
 Contains the formal application details, the measurement and cryptographic verification methodologies, the independent witness declarations, and the comprehensive Evidence Inventory (videos, logs, photos).
 
+## Disclaimer 
+
+This record attempt and the associated project are independent and are not endorsed by, sponsored by, or affiliated with Guinness World Records, the Bletchley Park Trust, The National Museum of Computing (TNMOC), or any other organization. All trademarks and registered trademarks are the property of their respective owners.
+
 ---
 *Maintained for Guinness World Record Adjudication.*
+

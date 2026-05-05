@@ -34,10 +34,10 @@ jobs:
           mkdir docs
           # Create symlinks or copy files so mkdocs sees them in docs/
           cp README.md docs/index.md
-          cp RECORD_ATTEMPT.md docs/
+          # cp RECORD_ATTEMPT.md docs/
           cp RECORD_SPECIFICATION.md docs/
-          cp WITNESS_1_STATEMENT_TEMPLATE.md docs/
-          cp WITNESS_2_STATEMENT_TEMPLATE.md docs/
+          # cp WITNESS_1_STATEMENT_TEMPLATE.md docs/
+          # cp WITNESS_2_STATEMENT_TEMPLATE.md docs/
           cp -r img docs/
           cp -r tests docs/
           cp -r logs docs/ || true

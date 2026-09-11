@@ -42,7 +42,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Record Specification: RECORD_SPECIFICATION.md
+  - Technical Specification: RECORD_SPECIFICATION.md
   - Implementation & Verification: RECORD_ATTEMPT.md
   # - Witness Statements:
   #     - Witness 1: WITNESS_1_STATEMENT_TEMPLATE.md

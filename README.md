@@ -22,7 +22,7 @@ The Enigma machine was a famously complex electro-mechanical rotor cipher device
   <em>Bletchley Park Naval Enigma</em>
 </p>
 
-**Beyond the technical challenge of extreme miniaturization, this engineering experiment explores the limits of compact embedded systems while honoring the history of cryptography. The cryptographic breakthroughs achieved during the latter stages of World War II were the main drivers of crucial historical events, ultimately shaping not only the outcome of the conflict but the foundation of our modern, digitally interconnected world.**
+**Beyond the technical challenge of extreme miniaturization, this engineering effort serves a broader purpose. It is intended to focus public attention on the paramount importance of scientific research, specifically in the field of cryptography. The cryptographic breakthroughs achieved during the latter stages of World War II were the main drivers of crucial historical events, ultimately shaping not only the outcome of the conflict but the foundation of our modern, digitally interconnected world.**
 
 The documentation is organized into two primary sections:
 

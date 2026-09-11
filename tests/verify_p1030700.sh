@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# Guinness World Record Verification Kit
+# Smallest Enigma Emulator Verification Kit
 # Target: Enigma M4 Message P1030700 (Hoerenberg Collection U-534)
 # Source: https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030700
 # ==============================================================================

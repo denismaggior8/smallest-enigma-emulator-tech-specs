@@ -1,16 +1,16 @@
-# Smallest Enigma Emulator: Guinness World Record Attempt
+# Smallest Enigma Emulator: Technical Specifications & Engineering Experiment
 
-**Record Title:** "Smallest fully functional Enigma M4 machine emulator implemented on commercially available hardware"
+**Project Objective:** Design and verify the smallest fully functional Enigma M4 machine emulator implemented on commercially available hardware.
 
 <p align="center">
-  <img src="./img/cover.jpg" alt="Miniaturising History: The World's Smallest Enigma M4 Emulator">
+  <img src="./img/cover.jpg" alt="Miniaturising History: The Smallest Enigma M4 Emulator">
 </p>
 
 ## Introduction
 
-This repository serves as the official entry point for the Technical Specifications and Record Attempt documentation for a Guinness World Records application. 
+This repository serves as the technical documentation and verification report for a private engineering experiment in cryptographic hardware miniaturization.
 
-The objective is to design, deploy, and verify the smallest possible,  self-contained, fully functional **Enigma M4** emulator using strictly commercially available hardware. The device must accurately replicate the complete cryptographic behavior of a World War II Kriegsmarine Enigma M4 machine and successfully decrypt authentic historical ciphertexts.
+The objective is to design, deploy, and verify the smallest possible, self-contained, fully functional **Enigma M4** emulator using strictly commercially available hardware. The device accurately replicates the complete cryptographic behavior of a World War II Kriegsmarine Enigma M4 machine and successfully decrypts authentic historical ciphertexts.
 
 The Enigma machine was a famously complex electro-mechanical rotor cipher device used extensively by Nazi Germany during World War II to protect highly classified military communications. It has since become a global symbol of the birth of modern computing and cryptanalysis, popularized in recent years by the Oscar-winning film *The Imitation Game*. The film chronicled the monumental and top-secret efforts of Alan Turing and the brilliant team at Bletchley Park, whose success in breaking the seemingly unbreakable Enigma code proved to be a decisive turning point in the war. 
 
@@ -22,20 +22,18 @@ The Enigma machine was a famously complex electro-mechanical rotor cipher device
   <em>Bletchley Park Naval Enigma</em>
 </p>
 
-**Beyond the technical challenge of extreme miniaturization, this record attempt serves a broader purpose. It is intended to focus public attention on the paramount importance of scientific research, specifically in the field of cryptography. The cryptographic breakthroughs achieved during the latter stages of World War II were the main drivers of crucial historical events, ultimately shaping not only the outcome of the conflict but the foundation of our modern, digitally interconnected world.**
+**Beyond the technical challenge of extreme miniaturization, this engineering experiment explores the limits of compact embedded systems while honoring the history of cryptography. The cryptographic breakthroughs achieved during the latter stages of World War II were the main drivers of crucial historical events, ultimately shaping not only the outcome of the conflict but the foundation of our modern, digitally interconnected world.**
 
-To facilitate adjudication and public review, the documentation has been organized into two primary documents:
+The documentation is organized into two primary sections:
 
-### 1. [Record Specification](./RECORD_SPECIFICATION.md)
+### 1. [Technical Specification](./RECORD_SPECIFICATION.md)
 Contains the strict technical rules governing the emulator, the dimensional constraints, and the baseline specifications of the original historical Enigma M4.
 
-### 2. [Record Attempt & Evidences](./RECORD_ATTEMPT.md)
-Contains the formal application details, the measurement and cryptographic verification methodologies, the independent witness declarations, and the comprehensive Evidence Inventory (videos, logs, photos).
+### 2. [Implementation & Verification](./RECORD_ATTEMPT.md)
+Contains the hardware implementation architecture, physical measurement methodology, cryptographic verification results, and reproducible verification artifacts (video recordings, logs, test scripts).
 
 ## Disclaimer 
 
-This record attempt and the associated project are independent and are not endorsed by, sponsored by, or affiliated with Guinness World Records, the Bletchley Park Trust, The National Museum of Computing (TNMOC), or any other organization. All trademarks and registered trademarks are the property of their respective owners.
+This project is an independent engineering experiment and is not endorsed by, sponsored by, or affiliated with the Bletchley Park Trust, The National Museum of Computing (TNMOC), or any other organization. All trademarks and registered trademarks are the property of their respective owners.
 
----
-*Maintained for Guinness World Record Adjudication.*
 

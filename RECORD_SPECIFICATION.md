@@ -1,24 +1,24 @@
 # Technical Specification Document  
-## Smallest M4 Enigma Emulator (Guinness World Records Submission)
+## Ultra-Compact M4 Enigma Emulator: Engineering Specification
 
 ---
 
 ## 1. Scope
 
-This document defines the strict technical, measurement, and validation requirements for the Guinness World Records title:
+This document defines the technical, measurement, and validation requirements for the engineering challenge:
 
 **"Smallest fully functional Enigma M4 machine emulator implemented on commercially available hardware"**
 
 ---
 
-## 2. Record Definition
+## 2. Specification & Benchmark Definition
 
-To ensure strict adherence to the record title, the record is defined as:
+To establish a clear engineering benchmark, the target specification is defined as:
 
 > The smallest volume (mm³) of a self-contained, commercially available hardware device capable of executing a fully functional Naval M4 Enigma cipher algorithm, as measured using the axis-aligned bounding box method.
 
 ### 2.1 Historical Baseline Comparison
-To provide a physical baseline for the miniaturization claim, the original electromechanical Enigma M4 (introduced in 1942 for the German U-boat fleet) had the following characteristics:
+To provide a physical baseline for the miniaturization comparison, the original electromechanical Enigma M4 (introduced in 1942 for the German U-boat fleet) had the following characteristics:
 
 *   **Physical Dimensions:** ~ 340 mm (width) × 280 mm (depth) × 150 mm (height)
 *   **Weight:** ~ 12 kg (26 lbs)
@@ -56,7 +56,7 @@ The measured volume MUST strictly account for the entirety of the functional emu
 - **Surface & Through-Hole Components:** All onboard microcontrollers, resistors, capacitors, and any other mounted hardware required for operation.
 - **Connectors & Interfaces:** Any permanently attached sockets, pins, or ports used for external interfacing.
 - **Solder Joints & Assembly Tolerances:** The measurement must capture the absolute maximum physical extremities of the device, which naturally includes the added height/width from solder bumps, component misalignments, and manufacturing tolerances.
-- **Enclosures & Cases (Optional):** If the claimant chooses to house the hardware inside a permanent protective case or custom enclosure, the measurement MUST encompass the absolute exterior dimensions of that case. While this inherently enlarges the volume of the attempt, a fully enclosed device is considered a single functional unit.
+- **Enclosures & Cases (Optional):** If the implementation chooses to house the hardware inside a permanent protective case or custom enclosure, the measurement MUST encompass the absolute exterior dimensions of that case. While this inherently enlarges the volume, a fully enclosed device is considered a single functional unit.
 
 ---
 
@@ -68,7 +68,7 @@ To ensure the measurement isolates the core computational unit from its temporar
 - **External Power Supplies:** Batteries, power banks, or mains adapters that provide electrical power but perform no cryptographic logic.
 - **Measurement Fixtures:** Calipers, stands, or mounting putty used temporarily to hold the device during the measurement process.
 - **Mounting Sockets:** Any non-computational socket, breadboard, bracket, or cradle used strictly to mount the board, provide physical stability, or facilitate temporary connections.
-- **Temporary I/O Jumper Wires:** If bare wires or jumper cables are temporarily attached or soldered solely for the purpose of demonstrating I/O during the record attempt, they do not count towards the device's permanent physical footprint.
+- **Temporary I/O Jumper Wires:** If bare wires or jumper cables are temporarily attached or soldered solely for the purpose of demonstrating I/O during testing, they do not count towards the device's permanent physical footprint.
 
 ---
 
@@ -81,7 +81,7 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 - **Rotor Settings:** Full support for *Grundstellung* (initial position) and *Ringstellung* (ring settings) across all inserted rotors.
 - **Plugboard (*Steckerbrett*):** Must allow for up to 13 arbitrary standard alphabet (A-Z) letter pairings.
 - **Correct Rotor Stepping:** Accurately mirroring the mechanical stepping mechanism, including the infamous historical "double-stepping" anomalies of the middle rotor.
-- **Optional Add-ons:** The emulation of highly specialized or experimental Enigma accessories—such as the *Enigma-Uhr* (a plugboard expansion switch) or the *UKW-D* (a field-rewirable reflector known as "Uncle D")—is not strictly required for a valid claim, although their inclusion remains permitted.
+- **Optional Add-ons:** The emulation of highly specialized or experimental Enigma accessories—such as the *Enigma-Uhr* (a plugboard expansion switch) or the *UKW-D* (a field-rewirable reflector known as "Uncle D")—is not strictly required for a valid implementation, although their inclusion remains permitted.
 - **User Interface Independence:** The physical user interface components of the historical machine (such as the keyboard and lampboard) have been intentionally omitted from this specification. The emulator is permitted to implement any user interface (e.g., a serial connection) provided the core cryptographic algorithm remains intact.
 
 *For historical and technical reference on the original Naval M4 Enigma, please consult:*
@@ -93,9 +93,9 @@ The system must cryptographically mirror the EXACT behavior of the historical Na
 
 ---
 
-## 5. Anti-Cheating Requirements
+## 5. Architectural Integrity Requirements
 
-In pursuit of a legitimate "emulator," the following constraints apply:
+In pursuit of a legitimate and authentic hardware emulator, the following constraints apply:
 
 ### 5.1 Software Rules
 
@@ -108,18 +108,18 @@ In pursuit of a legitimate "emulator," the following constraints apply:
 
 ### 5.2 Hardware Rules
 
-- **Commercially Available Hardware:** The emulator must be implemented on standard hardware that is publicly available for purchase by the general consumer from standard retail or electronics distribution channels. The hardware must be intended by its manufacturer to host custom code (e.g., a general-purpose microcontroller or development board); modifying the physical integrity, form, or original purpose of a commercial product (such as hacking a consumer device) to host the emulator is not permitted. The use of custom-fabricated silicon (e.g., custom ASICs), proprietary micro-PCBs manufactured exclusively for the record attempt, or restricted enterprise hardware is strictly prohibited. This ensures the record remains reproducible and grounded in accessible consumer technology.
+- **Commercially Available Hardware:** The emulator must be implemented on standard hardware that is publicly available for purchase by the general consumer from standard retail or electronics distribution channels. The hardware must be intended by its manufacturer to host custom code (e.g., a general-purpose microcontroller or development board); modifying the physical integrity, form, or original purpose of a commercial product (such as hacking a consumer device) to host the emulator is not permitted. The use of custom-fabricated silicon (e.g., custom ASICs), proprietary micro-PCBs manufactured exclusively for this project, or restricted enterprise hardware is strictly prohibited. This ensures the project remains reproducible and grounded in accessible consumer technology.
 - **No Post-Manufacturing Size Reduction:** Post-manufacturing physical modification intended to reduce the measured footprint (e.g., cutting, sanding, depaneling) is not permitted.
-- **No Removable Components to Cheat Size:** All components required for operation must be physically present within the measured footprint.
+- **No Removable Components to Artificially Reduce Size:** All components required for operation must be physically present within the measured footprint.
 - **No Externalized Functionality:** No functional dependency regarding the cryptographic encryption or decryption logic may exist outside the measured system boundary (standard I/O interfaces and power supplies are explicitly permitted as detailed in Section 5.1).
 
 ---
 
 ## 6. Validation Procedure
 
-To satisfy adjudicators, the definitive proof of cryptographic accuracy is that the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages").
+To verify cryptographic accuracy, the hardware emulator must be capable of successfully deciphering **any original, historically documented WWII Enigma plaintext/ciphertext pair** (often referred to as "broken messages").
 
-While the claimant is permitted to provide predefined test vectors to demonstrate baseline functionality, the emulator **MUST** be capable of successfully processing randomly selected, historically authenticated Enigma M4 messages chosen independently by the adjudicator or specialist witnesses. This prevents "cherry-picking" or hardcoding solutions for specific messages and ensures the cryptographic engine is fully generalized.
+While predefined test vectors demonstrate baseline functionality, the emulator **MUST** be capable of successfully processing randomly selected, historically authenticated Enigma M4 messages. This prevents "cherry-picking" or hardcoding solutions for specific messages and ensures the cryptographic engine is fully generalized.
 
 Each test vector must define:
 
@@ -130,35 +130,36 @@ Each test vector must define:
 The output must match exactly. Furthermore, to explicitly validate the **reciprocal nature** of the cipher, the emulator must be capable of subsequently re-encrypting the resulting plaintext directly back into the exact original ciphertext.
 
 ### 6.1 Test Vector Trust Chain
-To establish an unassailable trust chain for the test vectors, the validation procedure must adhere to the following:
+To establish an unassailable trust chain for the test vectors, the validation procedure adheres to the following:
 
 - **Source of Truth:** All ciphertexts and their corresponding key settings and plaintexts must be sourced from publicly recognized, peer-reviewed historical archives (e.g., the Hoerenberg Enigma M4 Project).
 - **Reference Implementation:** The correctness of the chosen test vectors must be independently verifiable against recognized, standard software Enigma simulators (such as Universal Enigma or those provided by the Crypto Museum) to prove the baseline is accurate.
-- **Reproducibility Method:** The validation process must be fully reproducible. The applicant must provide automated execution tools (e.g., shell scripts) that deterministically feed the configuration and ciphertext to the emulator, allowing adjudicators to easily replicate the exact test conditions and verify the output.
+- **Reproducibility Method:** The validation process must be fully reproducible. Automated execution tools (e.g., shell scripts) deterministically feed the configuration and ciphertext to the emulator, allowing anyone to easily replicate the exact test conditions and verify the output.
 
 ### 6.2 Validation Exceptions
 - **Batched Processing Exception:** Given the intentionally constrained hardware memory of miniaturized devices, the emulator is *not* required to buffer an entire historical message simultaneously during validation. The external client is permitted to stream lengthy payloads to the device iteratively in discrete batches.
 
 ---
 
-## 7. Evidence Requirements
+## 7. Verification Artifacts & Reproducibility
 
-The applicant must provide rigorous proof of the claim. A complete Evidence Inventory (documented in the separate `RECORD_ATTEMPT.md` file) must include:
+A complete Verification Inventory (documented in the separate `RECORD_ATTEMPT.md` file) includes:
 
-- **Unbroken Video Evidence:** A continuous, unedited physical camera recording showing the hardware board, the measurement process with calipers, and the real-time decryption output on a monitor simultaneously.
+- **Video Demonstrations:** Continuous recordings showing the hardware board, the measurement process with calipers, and the real-time decryption output.
 - **Raw System Logs:** Unedited standard output logs and/or interactive terminal recordings documenting the exact commands, decryption streams, and reverse-encryption processes.
-- **Independent Witness Statements:** Signed declarations from independent specialist witnesses (e.g., engineering or cryptography experts) verifying both the physical measurements and the cryptographic accuracy of the device.
-- **Photographic Evidence:** High-resolution photos of the board being measured.
+- **Photographic Documentation:** High-resolution photos of the board being measured.
+- **Automated Verification Scripts:** Executable test suites ensuring deterministic validation across platforms.
 
 ---
 
-## 8. Final Statement
+## 8. Physical Benchmark Criteria
 
-Provided that the emulator strictly meets the functional specification of the Enigma M4, the record is determined by its minimum measured volume (mm³).
+Provided that the emulator strictly meets the functional specification of the Enigma M4, the miniaturization benchmark is determined by its minimum measured volume (mm³).
 
 ---
 
-## 9. Supersession Criteria
-Each record attempt must demonstrate independent implementation and full compliance with the functional and validation requirements defined in this specification.
+## 9. Comparison & Benchmark Criteria
 
-To officially supersede this record, a competing implementation must demonstrate a strictly smaller physical volume (mm³) than the benchmark established here, while maintaining full historical cryptographic accuracy and computational autonomy as defined in this specification.
+Each implementation must demonstrate independent implementation and full compliance with the functional and validation requirements defined in this specification.
+
+To surpass the physical benchmark established here, an implementation must demonstrate a strictly smaller physical volume (mm³) while maintaining full historical cryptographic accuracy and computational autonomy as defined in this specification.
